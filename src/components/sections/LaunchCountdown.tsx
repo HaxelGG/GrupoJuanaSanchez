@@ -4,21 +4,16 @@ import { CONTACT } from "@/lib/site";
 import { CountdownDigits } from "@/components/primitives/CountdownDigits";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
 import { MagneticLink } from "@/components/primitives/MagneticLink";
+import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
 
 export function LaunchCountdown() {
   return (
     <section className="launch" id="lanzamiento">
       <div className="launch-bg">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
+        <AutoplayVideo
+          src="/assets/video/lolikas.mp4"
           poster="/assets/video/lolikas-poster.jpg"
-        >
-          <source src="/assets/video/lolikas.mp4" type="video/mp4" />
-        </video>
+        />
       </div>
 
       <div className="launch-inner">
@@ -76,16 +71,10 @@ export function LaunchCountdown() {
         </div>
 
         <div className="launch-visual reveal delay-1">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
+          <AutoplayVideo
+            src="/assets/video/lolikas.mp4"
             poster="/assets/video/lolikas-poster.jpg"
-          >
-            <source src="/assets/video/lolikas.mp4" type="video/mp4" />
-          </video>
+          />
           <div className="launch-visual-top">
             <span>JS · MMXXVI</span>
             <span>EDICIÓN NUEVA</span>

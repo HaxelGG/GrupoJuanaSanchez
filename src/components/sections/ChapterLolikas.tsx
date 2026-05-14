@@ -1,5 +1,6 @@
 // Sección · Capítulo Lolikas — la hermana joven · moda. Layout reverse.
 import Image from "next/image";
+import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
 
 const PRODUCTS: [string, string][] = [
   ["Bolsos", "Pieza única"],
@@ -60,16 +61,10 @@ export function ChapterLolikas() {
           </div>
         </div>
         <div className="story-visual reveal delay-1">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
+          <AutoplayVideo
+            src="/assets/video/lolikas.mp4"
             poster="/assets/video/lolikas-poster.jpg"
-          >
-            <source src="/assets/video/lolikas.mp4" type="video/mp4" />
-          </video>
+          />
           <div className="img-meta">LK · MMXXVI · EDICIÓN · MOVIMIENTO</div>
         </div>
       </div>
