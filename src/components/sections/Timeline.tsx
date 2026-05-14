@@ -1,5 +1,11 @@
-// Sección 6 · Timeline horizontal — 7 hitos (1975 → 2026).
-// Scroll-snap nativo CSS; los botones prev/next y el rail progresivo llegan en Fase 3.
+"use client";
+
+// Sección · Timeline — 7 hitos (1975 → 2026). Brief §6.
+// Desktop: scroll-snap horizontal + botones prev/next + rueda vertical
+// convertida a horizontal (liberada en los extremos para no pelear con
+// Lenis) + rail que se rellena en malva según el progreso.
+// Móvil: lista vertical (sin scroll horizontal).
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Step = {
   year: string;
@@ -60,6 +66,63 @@ const STEPS: Step[] = [
 ];
 
 export function Timeline() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLDivElement>(null);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
+
+  const sync = useCallback(() => {
+    const t = trackRef.current;
+    if (!t) return;
+    const max = t.scrollWidth - t.clientWidth;
+    const progress = max > 0 ? t.scrollLeft / max : 0;
+    // El fill del rail se escribe directo en el DOM — sin re-render por frame.
+    railRef.current?.style.setProperty("--rail-progress", String(progress));
+    setAtStart(t.scrollLeft <= 1);
+    setAtEnd(t.scrollLeft >= max - 1);
+  }, []);
+
+  useEffect(() => {
+    const t = trackRef.current;
+    if (!t) return;
+    sync();
+
+    const onScroll = () => sync();
+    t.addEventListener("scroll", onScroll, { passive: true });
+
+    // Rueda vertical → scroll horizontal. Solo se "secuestra" el evento si
+    // queda recorrido en esa dirección; en los extremos se deja pasar para
+    // que Lenis siga moviendo la página.
+    const onWheel = (e: WheelEvent) => {
+      const delta = e.deltaY;
+      if (delta === 0) return;
+      const max = t.scrollWidth - t.clientWidth;
+      const canRight = t.scrollLeft < max - 1;
+      const canLeft = t.scrollLeft > 1;
+      if ((delta > 0 && canRight) || (delta < 0 && canLeft)) {
+        e.preventDefault();
+        e.stopPropagation();
+        t.scrollLeft += delta;
+      }
+    };
+    t.addEventListener("wheel", onWheel, { passive: false });
+
+    window.addEventListener("resize", sync);
+    return () => {
+      t.removeEventListener("scroll", onScroll);
+      t.removeEventListener("wheel", onWheel);
+      window.removeEventListener("resize", sync);
+    };
+  }, [sync]);
+
+  const scrollByStep = (dir: 1 | -1) => {
+    const t = trackRef.current;
+    if (!t) return;
+    const step = t.querySelector<HTMLElement>(".t-step");
+    const amount = step ? step.offsetWidth * 1.5 : t.clientWidth * 0.7;
+    t.scrollBy({ left: dir * amount, behavior: "smooth" });
+  };
+
   return (
     <section className="timeline-section">
       <div className="timeline-head">
@@ -77,8 +140,8 @@ export function Timeline() {
         </p>
       </div>
 
-      <div className="timeline-track" id="timelineTrack">
-        <div className="timeline-rail">
+      <div className="timeline-track" id="timelineTrack" ref={trackRef}>
+        <div className="timeline-rail" ref={railRef}>
           {STEPS.map((s) => (
             <div
               key={s.year}
@@ -94,8 +157,32 @@ export function Timeline() {
         </div>
       </div>
 
-      <div className="timeline-cue">
-        Desliza horizontalmente para ver la trayectoria
+      <div className="timeline-foot">
+        <div className="timeline-cue">Desliza o usa las flechas</div>
+        <div className="timeline-controls">
+          <button
+            type="button"
+            className="t-ctrl"
+            onClick={() => scrollByStep(-1)}
+            disabled={atStart}
+            aria-label="Hito anterior"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+              <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            className="t-ctrl"
+            onClick={() => scrollByStep(1)}
+            disabled={atEnd}
+            aria-label="Hito siguiente"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+              <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );
