@@ -19,18 +19,21 @@ export default function Home() {
     <>
       <EventStrip />
       <Nav />
+      {/* Orden según addendum v2 §1.1 — FimiEvent sube al puesto 4
+          mientras FIMI está en vivo (14-16 may). El reorden dinámico
+          según getEventStatus() se implementa en Fase 3. */}
       <main>
         <Hero />
+        <FimiEvent />
+        <LaunchCountdown />
         <Declaration />
         <PullQuote />
         <Timeline />
         <TrioIntro />
-        <LaunchCountdown />
         <ChapterJuana />
         <ChapterLolikas />
         <ChapterPrintellar />
         <Manifesto />
-        <FimiEvent />
         <Shops />
       </main>
       <Footer />

@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Grupo Juana Sánchez — Landing
 
-## Getting Started
+Landing page editorial para **Grupo Juana Sánchez** — un legado, tres firmas:
+Juana Sánchez (ceremonia) · Lolikas (moda) · Printellar (taller técnico).
+Pieza de branding, no de venta: la conversión sucede en las tiendas externas.
 
-First, run the development server:
+**En vivo:** proyecto Vercel `grupo-juana-sanchez` → dominio final `grupojuanasanchez.com`.
+
+## Stack
+
+- **Next.js 15** (App Router, RSC) · TypeScript estricto
+- **Tailwind CSS 4** + variables OKLCH · **shadcn/ui** (base-nova)
+- **Motion** (animaciones) · **Lenis** (smooth scroll)
+- **react-hook-form + zod** (formularios) · **Resend** (captura de leads)
+- Deploy en **Vercel** (Git integration: push a `main` → deploy)
+
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm build        # build de producción
+pnpm exec tsc --noEmit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estructura
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/            layout, page, globals.css
+  components/
+    sections/     los 15 componentes de sección de la landing
+    ui/           componentes shadcn
+  lib/            fonts, site (constantes), utils
+  styles/         landing.css — CSS de la spec portado
+public/assets/    images · video · logos
+docs/             brief del proyecto + spec visual (no se deploya)
+scripts/          extract-assets · vercel-deploy (fallback REST)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+El proyecto está conectado a Vercel por Git: cada push a `main` dispara un
+deploy de producción; cada rama/PR genera un preview.
 
-To learn more about Next.js, take a look at the following resources:
+Fallback manual (si el CLI de Vercel falla con el token):
+```bash
+VERCEL_TOKEN=xxx node scripts/vercel-deploy.mjs [--prod]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Plan de fases
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ver `docs/CLAUDE-CODE-BRIEF.md` §13 y `docs/CLAUDE-CODE-BRIEF-v2-ADDENDUM.md`.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Fase 0** — Setup (Next + shadcn + deps + assets) ✅
+- **Fase 1** — Estructura: 15 secciones, maqueta estática ✅
+- **Fase 2** — Countdown en vivo + formulario de captura de email
+- **Fase 3** — Animaciones premium + cambios del addendum v2
+  (reorden de secciones, FimiLiveBubble, WhatsApp en nav, cursor magnético)
+- **Fase 4** — SEO + performance (OG image, schema.org, next/image)
+- **Fase 5** — Deploy producción + dominio `grupojuanasanchez.com`

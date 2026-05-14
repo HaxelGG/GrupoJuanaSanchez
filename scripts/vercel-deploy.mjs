@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const TOKEN = process.env.VERCEL_TOKEN;
 const PROD = process.argv.includes("--prod");
-const NAME = "juana-sanchez-landing";
+const NAME = "grupo-juana-sanchez";
 const API = "https://api.vercel.com";
 
 if (!TOKEN) {
@@ -19,7 +19,7 @@ if (!TOKEN) {
 
 const IGNORE = new Set([
   "node_modules", ".next", ".git", ".vercel", ".vercel-cfg",
-  ".turbo", ".DS_Store",
+  ".turbo", ".DS_Store", "docs",
 ]);
 
 // 1) recolectar archivos del proyecto

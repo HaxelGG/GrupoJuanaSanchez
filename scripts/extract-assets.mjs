@@ -5,7 +5,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const HTML = resolve(__dirname, "../../index.html");
+const HTML = resolve(__dirname, "../docs/spec-landing.html");
 const OUT = resolve(__dirname, "../public/assets");
 const WRITE = process.argv.includes("--write");
 
