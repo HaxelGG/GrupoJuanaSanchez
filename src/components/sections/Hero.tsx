@@ -1,10 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
-// Sección 3 · Hero full-bleed. Imagen → next/image en Fase 4.
+// Sección · Hero full-bleed. Imagen optimizada con next/image (priority → LCP).
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg">
-        <img src="/assets/images/girl-hero.jpg" alt="Niña con corona artesanal — Grupo Juana Sánchez" />
+        <Image
+          src="/assets/images/girl-hero.jpg"
+          alt="Niña con corona artesanal — Grupo Juana Sánchez"
+          fill
+          priority
+          sizes="100vw"
+        />
       </div>
       <div className="hero-content">
         <div className="hero-top">

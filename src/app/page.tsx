@@ -14,14 +14,78 @@ import { FimiEvent } from "@/components/sections/FimiEvent";
 import { Shops } from "@/components/sections/Shops";
 import { Footer } from "@/components/sections/Footer";
 
+// Schema.org — brief §9.2.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Grupo Juana Sánchez",
+      url: "https://grupojuanasanchez.com",
+      foundingDate: "1975",
+      founder: { "@type": "Person", name: "Juana Sánchez" },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Madrid",
+        addressCountry: "ES",
+      },
+      sameAs: [
+        "https://www.juanasanchez.es",
+        "https://www.lolikas.com",
+        "https://instagram.com/grupojuanasanchez",
+      ],
+    },
+    {
+      "@type": "Brand",
+      name: "Juana Sánchez",
+      slogan:
+        "La casa marida tradición artesanal con visión contemporánea, definida por una sofisticación que trasciende generaciones.",
+    },
+    {
+      "@type": "Brand",
+      name: "Lolikas",
+      slogan:
+        "La esencia refrescante. Juventud y sofisticación. La mirada joven y vibrante del legado Juana Sánchez.",
+    },
+    {
+      "@type": "Brand",
+      name: "Printellar",
+      slogan:
+        "Artesanía técnica con sofisticación sin compromisos. La versión técnica y creativa del legado Juana Sánchez.",
+    },
+    {
+      "@type": "Event",
+      name: "FIMI Valencia 2026 — Edición 40",
+      startDate: "2026-05-15",
+      endDate: "2026-05-16",
+      eventStatus: "https://schema.org/EventScheduled",
+      location: {
+        "@type": "Place",
+        name: "Feria Valencia · Pabellón 8 · Stand C35",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Valencia",
+          addressCountry: "ES",
+        },
+      },
+      organizer: { "@type": "Organization", name: "FIMI" },
+      performer: { "@type": "Organization", name: "Grupo Juana Sánchez" },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <EventStrip />
       <Nav />
-      {/* Orden según addendum v2 §1.1 — FimiEvent sube al puesto 4
-          mientras FIMI está en vivo (14-16 may). El reorden dinámico
-          según getEventStatus() se implementa en Fase 3. */}
+      {/* Orden según addendum v2 §1.1 — FimiEvent en el puesto 4 mientras
+          FIMI no haya terminado; al terminar se autodestruye y LaunchCountdown
+          ocupa su lugar de forma natural. */}
       <main>
         <Hero />
         <FimiEvent />

@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-// Sección 15 · Footer — marquee de boutiques (CSS-only) + 4 columnas.
+// Sección · Footer — marquee de boutiques (CSS-only) + 4 columnas.
+import Image from "next/image";
 import { BOUTIQUES, CONTACT, SHOPS } from "@/lib/site";
 
 export function Footer() {
@@ -24,10 +24,12 @@ export function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="fb-head">
-              <img
+              <Image
                 className="fb-logo"
                 src="/assets/logos/monograma-js.jpg"
                 alt="Monograma Grupo Juana Sánchez"
+                width={56}
+                height={56}
               />
               <div className="fb-name">
                 Grupo

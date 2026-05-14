@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-// Sección 10 · Capítulo Lolikas — la hermana joven · moda. Layout reverse.
+// Sección · Capítulo Lolikas — la hermana joven · moda. Layout reverse.
+import Image from "next/image";
 
 const PRODUCTS: [string, string][] = [
   ["Bolsos", "Pieza única"],
@@ -60,7 +60,14 @@ export function ChapterLolikas() {
           </div>
         </div>
         <div className="story-visual reveal delay-1">
-          <video autoPlay muted loop playsInline preload="auto">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/assets/video/lolikas-poster.jpg"
+          >
             <source src="/assets/video/lolikas.mp4" type="video/mp4" />
           </video>
           <div className="img-meta">LK · MMXXVI · EDICIÓN · MOVIMIENTO</div>
@@ -69,16 +76,20 @@ export function ChapterLolikas() {
 
       <div className="detail-strip">
         <div className="detail-img reveal">
-          <img
+          <Image
             src="/assets/images/lolikas-paleta-nude.jpg"
-            alt="Paleta nude Lolikas"
+            alt="Paleta nude Lolikas — rosas crema"
+            fill
+            sizes="(max-width: 920px) 100vw, 700px"
           />
           <div className="det-meta">Det. 03 — Paleta nude</div>
         </div>
         <div className="detail-img reveal delay-1">
-          <img
+          <Image
             src="/assets/images/lolikas-pieza-unica.jpg"
             alt="Pieza única Lolikas"
+            fill
+            sizes="(max-width: 920px) 100vw, 700px"
           />
           <div className="det-meta">Det. 04 — Pieza única</div>
         </div>

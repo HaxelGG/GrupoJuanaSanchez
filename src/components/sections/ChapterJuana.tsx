@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-// Sección 9 · Capítulo Juana Sánchez — casa madre · ceremonia.
-// Fase 1: layout estático. El sticky storytelling con crossfade llega en Fase 3.
+// Sección · Capítulo Juana Sánchez — casa madre · ceremonia.
+import Image from "next/image";
 
 const PRODUCTS: [string, string][] = [
   ["Coronas", "Comunión"],
@@ -82,9 +81,11 @@ export function ChapterJuana() {
           </div>
         </div>
         <div className="story-visual reveal delay-1">
-          <img
+          <Image
             src="/assets/images/girl-juana.jpg"
             alt="Pieza de ceremonia Juana Sánchez, hecha a mano en Madrid"
+            fill
+            sizes="(max-width: 920px) 100vw, 700px"
           />
           <div className="img-meta">JS · MADRID · 1975</div>
         </div>
@@ -92,16 +93,20 @@ export function ChapterJuana() {
 
       <div className="detail-strip">
         <div className="detail-img reveal">
-          <img
+          <Image
             src="/assets/images/detail-corona.jpg"
             alt="Detalle de corona artesanal"
+            fill
+            sizes="(max-width: 920px) 100vw, 700px"
           />
           <div className="det-meta">Det. 01 — Corona artesanal</div>
         </div>
         <div className="detail-img reveal delay-1">
-          <img
+          <Image
             src="/assets/images/detail-encaje.jpg"
             alt="Detalle de encaje hecho a mano"
+            fill
+            sizes="(max-width: 920px) 100vw, 700px"
           />
           <div className="det-meta">Det. 02 — Encaje hecho a mano</div>
         </div>

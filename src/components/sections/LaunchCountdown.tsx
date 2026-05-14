@@ -9,7 +9,14 @@ export function LaunchCountdown() {
   return (
     <section className="launch" id="lanzamiento">
       <div className="launch-bg">
-        <video autoPlay muted loop playsInline preload="auto">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/assets/video/lolikas-poster.jpg"
+        >
           <source src="/assets/video/lolikas.mp4" type="video/mp4" />
         </video>
       </div>
