@@ -1,5 +1,6 @@
 // Sección · Capítulo Juana Sánchez — casa madre · ceremonia.
 import Image from "next/image";
+import { JuanaStory } from "./JuanaStory";
 
 const PRODUCTS: [string, string][] = [
   ["Coronas", "Comunión"],
@@ -36,60 +37,7 @@ export function ChapterJuana() {
         </h2>
       </div>
 
-      <div className="chapter-story">
-        <div className="story-text">
-          <p className="tagline reveal">
-            El primer día
-            <br />
-            <span
-              style={{
-                color: "var(--mauve-deep)",
-                fontWeight: 500,
-                fontStyle: "normal",
-              }}
-            >
-              que recordarás
-            </span>
-            <br />
-            siempre.
-          </p>
-          <p className="body-prose reveal delay-1">
-            Especialistas en complementos y calzados únicos para los días que se
-            cuentan en la familia: novias, madrinas, comunión, arras. Cada pieza
-            nace en nuestro taller, una a una, sin prisa.{" "}
-            <em>Diseñada con corazón y personalidad</em> para que tú o tu hijo os
-            sintáis muy especiales.
-          </p>
-          <p className="body-prose reveal delay-2">
-            Cincuenta años después del primer encargo, el método sigue siendo el
-            mismo: hilo, paciencia, mirada. Las máquinas cortan. Las manos
-            deciden.
-          </p>
-          <div className="story-meta reveal delay-3">
-            <div className="story-meta-item">
-              <span className="lbl">Especialidad</span>
-              <span className="val">Comunión · Arras · Novia</span>
-            </div>
-            <div className="story-meta-item">
-              <span className="lbl">Producción</span>
-              <span className="val">Hecho a mano · Bajo pedido</span>
-            </div>
-            <div className="story-meta-item">
-              <span className="lbl">Distribución</span>
-              <span className="val">Boutiques selectas en España</span>
-            </div>
-          </div>
-        </div>
-        <div className="story-visual reveal delay-1">
-          <Image
-            src="/assets/images/juana-ceremonia.jpg"
-            alt="Esparteñas y corona de ceremonia Juana Sánchez, hechas a mano"
-            fill
-            sizes="(max-width: 920px) 100vw, 700px"
-          />
-          <div className="img-meta">JS · MADRID · 1975</div>
-        </div>
-      </div>
+      <JuanaStory />
 
       <div className="detail-strip">
         <div className="detail-img reveal">
