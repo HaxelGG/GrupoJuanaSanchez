@@ -1022,8 +1022,8 @@
   margin: 0 auto;
 }
 .detail-img {
-  /* 4/5 vertical — encaja las fotos reales de producto (3:4) sin recorte agresivo */
-  aspect-ratio: 4/5;
+  /* 3/4 = ratio exacto de las fotos de producto → object-fit: cover sin recorte */
+  aspect-ratio: 3/4;
   overflow: hidden;
   background: var(--cream-deep);
   position: relative;
@@ -1128,7 +1128,7 @@
   .chapter-story { grid-template-columns: 1fr; gap: 40px; }
   .chapter-story.reverse { direction: ltr; }
   .story-text { padding: 0; gap: 32px; }
-  .story-visual { position: relative; top: auto; aspect-ratio: 4/4.5; }
+  .story-visual { position: relative; top: auto; aspect-ratio: 3/4; }
   .detail-strip { grid-template-columns: 1fr; }
   .products-wrap { grid-template-columns: 1fr; gap: 24px; padding-bottom: 80px; }
   .product-grid { grid-template-columns: 1fr; }
