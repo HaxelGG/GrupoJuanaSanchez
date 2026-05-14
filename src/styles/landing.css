@@ -2034,11 +2034,38 @@
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   FASE 1 — NEUTRALIZADOR DE ANIMACIONES DE ENTRADA
-   La maqueta debe verse completa SIN JS. En Fase 3 se elimina este
-   bloque y se conectan los reveals/parallax con Motion + IntersectionObserver.
+   FASE 3 — reveals activos + utilidades de scroll
+   El SiteEffects observer añade .in a los .reveal al entrar al viewport.
    ════════════════════════════════════════════════════════════════════ */
-.reveal { opacity: 1; transform: none; }
-.hero-bg img { animation: none; transform: scale(1.0); }
-.hero-title .line span { transform: none; animation: none; }
-.hero-sub, .hero-cue { opacity: 1; animation: none; }
+.reveal { opacity: 0; transform: translateY(32px); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Barra de progreso de scroll superior (§7.9) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--mauve-deep);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 130;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Transición de fondo del body cuando Printellar domina el viewport (§7.5) */
+body {
+  transition: background-color 1.2s ease;
+}
+body.is-dark-section {
+  background-color: var(--black);
+}
+
+/* Nav — agrupador derecho: links + botón WhatsApp + hamburguesa */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2vw, 28px);
+}

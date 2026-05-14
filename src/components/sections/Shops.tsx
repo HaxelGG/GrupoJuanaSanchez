@@ -1,5 +1,7 @@
-// Sección 14 · Shops — tres puertas a las tiendas online.
+// Sección · Shops — tres puertas a las tiendas online.
+// Cada botón con magnetic pull (addendum §5.4).
 import { CONTACT, SHOPS } from "@/lib/site";
+import { MagneticLink } from "@/components/primitives/MagneticLink";
 
 type Shop = {
   brand: "js" | "lolikas" | "printellar";
@@ -59,7 +61,7 @@ export function Shops() {
       </div>
       <div className="shops-grid">
         {SHOP_LIST.map((s, i) => (
-          <a
+          <MagneticLink
             key={s.brand}
             href={s.href}
             target="_blank"
@@ -76,7 +78,7 @@ export function Shops() {
               <span>{s.foot}</span>
               <span className="shop-arrow">→</span>
             </div>
-          </a>
+          </MagneticLink>
         ))}
       </div>
     </section>

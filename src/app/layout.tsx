@@ -9,6 +9,10 @@ import {
   jetbrains,
 } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/sonner";
+import { SmoothScroll } from "@/components/primitives/SmoothScroll";
+import { SiteEffects } from "@/components/primitives/SiteEffects";
+import { MagneticCursor } from "@/components/primitives/MagneticCursor";
+import { FimiLiveBubble } from "@/components/sections/FimiLiveBubble";
 
 export const metadata: Metadata = {
   title: "Grupo Juana Sánchez — Cincuenta años cosiendo memoria",
@@ -35,7 +39,15 @@ export default function RootLayout({
       className={`${italiana.variable} ${cormorant.variable} ${fraunces.variable} ${jost.variable} ${jetbrains.variable}`}
     >
       <body>
+        {/* Sin JS los reveals quedarían invisibles — fallback. */}
+        <noscript>
+          <style>{`.reveal{opacity:1;transform:none}`}</style>
+        </noscript>
+        <SmoothScroll />
+        <SiteEffects />
         {children}
+        <FimiLiveBubble />
+        <MagneticCursor />
         <Toaster position="bottom-center" />
       </body>
     </html>

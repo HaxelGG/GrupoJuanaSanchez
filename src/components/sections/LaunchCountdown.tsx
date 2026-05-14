@@ -3,6 +3,7 @@
 import { CONTACT } from "@/lib/site";
 import { CountdownDigits } from "@/components/primitives/CountdownDigits";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
+import { MagneticLink } from "@/components/primitives/MagneticLink";
 
 export function LaunchCountdown() {
   return (
@@ -37,14 +38,15 @@ export function LaunchCountdown() {
           <CountdownDigits />
 
           <div className="launch-cta reveal delay-3">
-            <a
+            <MagneticLink
               className="btn-primary"
               href={CONTACT.instagram}
               target="_blank"
               rel="noopener"
+              strength={0.4}
             >
               Sé de las primeras en verla
-            </a>
+            </MagneticLink>
             <SubscribeDialog />
           </div>
 

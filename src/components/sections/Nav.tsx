@@ -4,6 +4,7 @@
 // (.on-dark) para mantener legibilidad. Menú hamburguesa en mobile.
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/site";
+import { WhatsAppNavButton } from "@/components/sections/WhatsAppNavButton";
 
 const DARK_SELECTORS = ["#lanzamiento", "#printellar", ".event"];
 
@@ -60,25 +61,29 @@ export function Nav() {
           <span className="est">EST · 1975</span>
         </a>
 
-        <div className="nav-links">
-          {NAV_LINKS.map((l) => (
-            <a key={l.href} href={l.href}>
-              {l.label}
-            </a>
-          ))}
-        </div>
+        <div className="nav-right">
+          <div className="nav-links">
+            {NAV_LINKS.map((l) => (
+              <a key={l.href} href={l.href}>
+                {l.label}
+              </a>
+            ))}
+          </div>
 
-        <button
-          type="button"
-          className="nav-burger"
-          aria-label="Abrir menú"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(true)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+          <WhatsAppNavButton />
+
+          <button
+            type="button"
+            className="nav-burger"
+            aria-label="Abrir menú"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(true)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </nav>
 
       {menuOpen && (
