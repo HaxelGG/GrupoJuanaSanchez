@@ -8,6 +8,7 @@ import {
   jost,
   jetbrains,
 } from "@/lib/fonts";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Grupo Juana Sánchez — Cincuenta años cosiendo memoria",
@@ -33,7 +34,10 @@ export default function RootLayout({
       lang="es"
       className={`${italiana.variable} ${cormorant.variable} ${fraunces.variable} ${jost.variable} ${jetbrains.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster position="bottom-center" />
+      </body>
     </html>
   );
 }

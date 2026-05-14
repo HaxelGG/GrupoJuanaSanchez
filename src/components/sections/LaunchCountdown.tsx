@@ -1,14 +1,8 @@
-// Sección 8 · Lanzamiento + cuenta atrás. ⚠️ CRÍTICO.
-// Fase 1: estructura estática con placeholders "--".
-// Fase 2: countdown en vivo a LAUNCH_TARGET_UTC + dialog de captura de email.
+// Sección · Lanzamiento + cuenta atrás. ⚠️ CRÍTICO (brief §8).
+// Countdown en vivo + captura de email operativos (Fase 2).
 import { CONTACT } from "@/lib/site";
-
-const UNITS = [
-  { id: "days", label: "Días" },
-  { id: "hours", label: "Horas" },
-  { id: "mins", label: "Minutos" },
-  { id: "secs", label: "Segundos" },
-] as const;
+import { CountdownDigits } from "@/components/primitives/CountdownDigits";
+import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
 
 export function LaunchCountdown() {
   return (
@@ -40,18 +34,7 @@ export function LaunchCountdown() {
             las primeras en verla.
           </p>
 
-          <div className="countdown reveal delay-2" id="countdown">
-            {UNITS.map((u) => (
-              <div className="cd-unit" key={u.id}>
-                <div className="cd-box">
-                  <span className="cd-value" id={`cd-${u.id}`}>
-                    --
-                  </span>
-                </div>
-                <span className="cd-label">{u.label}</span>
-              </div>
-            ))}
-          </div>
+          <CountdownDigits />
 
           <div className="launch-cta reveal delay-3">
             <a
@@ -62,10 +45,7 @@ export function LaunchCountdown() {
             >
               Sé de las primeras en verla
             </a>
-            {/* Fase 2: abre el dialog de captura de email */}
-            <button type="button" className="btn-ghost">
-              Avísame por email
-            </button>
+            <SubscribeDialog />
           </div>
 
           <div className="launch-meta reveal delay-3">
