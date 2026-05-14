@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ════════════════════════════════════════════════════════════════════
+   SISTEMA DE DISEÑO — GRUPO JUANA SÁNCHEZ
+   Paleta OKLCH del brief §5.1 · tres mundos cromáticos, un grupo.
+   Los valores son los validados con el cliente — no se cambian (§15).
+   ════════════════════════════════════════════════════════════════════ */
+@theme {
+  /* Crema · casa madre */
+  --color-cream:        oklch(0.945 0.018 88);
+  --color-cream-warm:   oklch(0.910 0.030 85);
+  --color-cream-deep:   oklch(0.872 0.034 84);
+  --color-bone:         oklch(0.962 0.018 88);
+  --color-paper:        oklch(0.974 0.015 87);
+
+  /* Juana Sánchez · malva y rosa polvo */
+  --color-mauve:        oklch(0.700 0.038 12);
+  --color-mauve-deep:   oklch(0.610 0.045 10);
+  --color-rose-dust:    oklch(0.805 0.045 18);
+  --color-rose-soft:    oklch(0.870 0.034 22);
+
+  /* Lolikas · mint / turquesa + peach */
+  --color-mint:         oklch(0.808 0.038 175);
+  --color-mint-soft:    oklch(0.882 0.026 170);
+  --color-mint-deep:    oklch(0.690 0.038 173);
+  --color-peach:        oklch(0.860 0.054 50);
+
+  /* Printellar · negro + dorado */
+  --color-black:        oklch(0.135 0 0);
+  --color-black-warm:   oklch(0.160 0.010 75);
+  --color-gold:         oklch(0.728 0.107 78);
+  --color-gold-warm:    oklch(0.660 0.105 70);
+  --color-gold-soft:    oklch(0.800 0.084 80);
+
+  /* Tinta */
+  --color-ink:          oklch(0.225 0.012 70);
+  --color-ink-soft:     oklch(0.450 0.015 75);
+  --color-ink-faint:    oklch(0.640 0.018 78);
+
+  /* Tipografías (asignadas por next/font en lib/fonts.ts) */
+  --font-display:  var(--font-italiana);
+  --font-serif:    var(--font-cormorant);
+  --font-serif-2:  var(--font-fraunces);
+  --font-sans:     var(--font-jost);
+  --font-mono:     var(--font-jetbrains);
+
+  /* Padding fluido (mismo del HTML) */
+  --spacing-pad-x:  clamp(20px, 5vw, 80px);
+  --spacing-pad-y:  clamp(80px, 12vw, 180px);
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   Tokens semánticos de shadcn → mapeados a la paleta del cliente.
+   ──────────────────────────────────────────────────────────────────── */
+:root {
+  --background:             var(--color-cream);
+  --foreground:             var(--color-ink);
+  --card:                   var(--color-paper);
+  --card-foreground:        var(--color-ink);
+  --popover:                var(--color-paper);
+  --popover-foreground:     var(--color-ink);
+  --primary:                var(--color-mauve-deep);
+  --primary-foreground:     var(--color-cream);
+  --secondary:              var(--color-cream-warm);
+  --secondary-foreground:   var(--color-ink);
+  --muted:                  var(--color-cream-warm);
+  --muted-foreground:       var(--color-ink-soft);
+  --accent:                 var(--color-mauve);
+  --accent-foreground:      var(--color-cream);
+  --destructive:            oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--color-cream);
+  --border:                 oklch(0.225 0.012 70 / 0.14);
+  --input:                  oklch(0.225 0.012 70 / 0.14);
+  --ring:                   var(--color-mauve-deep);
+  --radius:                 0.125rem;
+}
+
+/* Exponer los tokens semánticos a las utilidades de Tailwind 4
+   (bg-background, border-border, text-muted-foreground, …). */
+@theme inline {
+  --color-background:             var(--background);
+  --color-foreground:             var(--foreground);
+  --color-card:                   var(--card);
+  --color-card-foreground:        var(--card-foreground);
+  --color-popover:                var(--popover);
+  --color-popover-foreground:     var(--popover-foreground);
+  --color-primary:                var(--primary);
+  --color-primary-foreground:     var(--primary-foreground);
+  --color-secondary:              var(--secondary);
+  --color-secondary-foreground:   var(--secondary-foreground);
+  --color-muted:                  var(--muted);
+  --color-muted-foreground:       var(--muted-foreground);
+  --color-accent:                 var(--accent);
+  --color-accent-foreground:      var(--accent-foreground);
+  --color-destructive:            var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:                 var(--border);
+  --color-input:                  var(--input);
+  --color-ring:                   var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ──────────────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-mauve);
+    color: var(--color-cream);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
