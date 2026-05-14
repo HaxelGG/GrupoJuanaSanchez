@@ -64,7 +64,7 @@ export default async function OpengraphImage() {
               color: "rgba(244,239,230,0.85)",
             }}
           >
-            Madrid · España · Desde 1975
+            Caravaca de la Cruz · Murcia · España
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <div

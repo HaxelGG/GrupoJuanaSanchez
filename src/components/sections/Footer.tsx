@@ -1,10 +1,10 @@
 // Sección · Footer — marquee de boutiques (CSS-only) + 4 columnas.
 import Image from "next/image";
-import { BOUTIQUES, CONTACT, SHOPS } from "@/lib/site";
+import { BOUTIQUE_CITIES, CONTACT, SHOPS } from "@/lib/site";
 
 export function Footer() {
   // Doble pasada de ciudades para el loop sin costura del marquee.
-  const cities = [...BOUTIQUES, ...BOUTIQUES];
+  const cities = [...BOUTIQUE_CITIES, ...BOUTIQUE_CITIES];
 
   return (
     <footer className="site-footer">
@@ -41,16 +41,16 @@ export function Footer() {
               Tradición artesanal con visión contemporánea. Una sofisticación
               que trasciende generaciones.
             </p>
-            <div className="fb-since">EST · MCMLXXV · MADRID</div>
+            <div className="fb-since">EST · MCMLXXV · MURCIA</div>
           </div>
 
           <div className="footer-col">
             <h4>Boutiques</h4>
             <p>
-              Nuestras piezas se encuentran en boutiques selectas en toda
-              España.
+              Nuestras piezas se encuentran en boutiques selectas de Murcia y
+              el resto de España.
             </p>
-            <a href="#tiendas">Ver puntos de venta</a>
+            <a href="#puntos-de-venta">Ver puntos de venta</a>
           </div>
 
           <div className="footer-col">
@@ -68,6 +68,7 @@ export function Footer() {
 
           <div className="footer-col">
             <h4>Contacto</h4>
+            <a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phone} · Tienda</a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener">
               {CONTACT.whatsappDisplay} · WhatsApp
             </a>

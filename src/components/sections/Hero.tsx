@@ -15,7 +15,7 @@ export function Hero() {
       </div>
       <div className="hero-content">
         <div className="hero-top">
-          <div className="meta">Madrid · España · Desde MCMLXXV</div>
+          <div className="meta">Caravaca de la Cruz · Murcia · España</div>
           <div className="meta meta-right">
             Edición Privada · MMXXVI
             <br />

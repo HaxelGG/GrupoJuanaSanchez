@@ -12,6 +12,7 @@ import { ChapterPrintellar } from "@/components/sections/ChapterPrintellar";
 import { Manifesto } from "@/components/sections/Manifesto";
 import { FimiEvent } from "@/components/sections/FimiEvent";
 import { Shops } from "@/components/sections/Shops";
+import { PuntosDeVenta } from "@/components/sections/PuntosDeVenta";
 import { Footer } from "@/components/sections/Footer";
 
 // Schema.org — brief §9.2.
@@ -26,7 +27,10 @@ const jsonLd = {
       founder: { "@type": "Person", name: "Juana Sánchez" },
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Madrid",
+        streetAddress: "C/ Vicente Aleixandre, 12",
+        addressLocality: "Caravaca de la Cruz",
+        addressRegion: "Murcia",
+        postalCode: "30400",
         addressCountry: "ES",
       },
       sameAs: [
@@ -99,6 +103,7 @@ export default function Home() {
         <ChapterPrintellar />
         <Manifesto />
         <Shops />
+        <PuntosDeVenta />
       </main>
       <Footer />
     </>

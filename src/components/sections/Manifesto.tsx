@@ -12,7 +12,7 @@ export function Manifesto() {
           en uno que se recuerda.
         </p>
         <div className="manifesto-sign reveal delay-2">
-          Grupo Juana Sánchez · Madrid
+          Grupo Juana Sánchez · Murcia
         </div>
       </div>
     </section>

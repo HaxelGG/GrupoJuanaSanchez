@@ -1913,6 +1913,81 @@
   .launch-visual { aspect-ratio: 4/4.5; max-height: 65vh; }
 }
 
+/* ── PUNTOS DE VENTA — boutiques físicas ────────────────────────────── */
+.puntos-venta {
+  padding: clamp(80px, 11vw, 140px) var(--pad-x);
+  background: var(--bone);
+  border-top: 1px solid var(--line);
+}
+.puntos-head {
+  max-width: 1400px;
+  margin: 0 auto 56px;
+  display: grid;
+  grid-template-columns: 200px 1fr 320px;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: end;
+}
+.puntos-head .eyebrow {
+  align-self: start;
+  padding-top: 18px;
+}
+.puntos-head h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+}
+.puntos-head h2 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--mauve-deep);
+}
+.puntos-head .serif-prose {
+  align-self: end;
+  padding-bottom: 8px;
+}
+.puntos-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 clamp(40px, 6vw, 100px);
+  border-top: 1px solid var(--line);
+}
+.punto-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.punto-name {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.3vw, 19px);
+  color: var(--ink);
+}
+.punto-address {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.punto-city {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+@media (max-width: 920px) {
+  .puntos-head { grid-template-columns: 1fr; gap: 24px; }
+  .puntos-grid { grid-template-columns: 1fr; }
+}
+
 /* ── FOOTER ─────────────────────────────────────────────────────────── */
 .site-footer {
   background: var(--black);

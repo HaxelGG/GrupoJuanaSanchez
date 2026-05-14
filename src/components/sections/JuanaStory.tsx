@@ -101,7 +101,7 @@ export function JuanaStory() {
             </motion.div>
           ))
         )}
-        <div className="img-meta">JS · MADRID · 1975</div>
+        <div className="img-meta">JS · MURCIA · 1975</div>
       </div>
     </div>
   );

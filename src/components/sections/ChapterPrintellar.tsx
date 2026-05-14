@@ -76,7 +76,7 @@ export function ChapterPrintellar() {
             </div>
             <div className="mark">
               <span>Precisión / 0.1mm</span>
-              <span>Madrid</span>
+              <span>Murcia</span>
             </div>
           </div>
         </div>
