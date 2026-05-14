@@ -1016,7 +1016,8 @@
   margin: 0 auto;
 }
 .detail-img {
-  aspect-ratio: 16/10;
+  /* 4/5 vertical — encaja las fotos reales de producto (3:4) sin recorte agresivo */
+  aspect-ratio: 4/5;
   overflow: hidden;
   background: var(--cream-deep);
   position: relative;

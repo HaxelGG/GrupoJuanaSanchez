@@ -82,8 +82,8 @@ export function ChapterJuana() {
         </div>
         <div className="story-visual reveal delay-1">
           <Image
-            src="/assets/images/girl-juana.jpg"
-            alt="Pieza de ceremonia Juana Sánchez, hecha a mano en Madrid"
+            src="/assets/images/juana-ceremonia.jpg"
+            alt="Esparteñas y corona de ceremonia Juana Sánchez, hechas a mano"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
@@ -94,8 +94,8 @@ export function ChapterJuana() {
       <div className="detail-strip">
         <div className="detail-img reveal">
           <Image
-            src="/assets/images/detail-corona.jpg"
-            alt="Detalle de corona artesanal"
+            src="/assets/images/juana-corona.jpg"
+            alt="Corona artesanal Juana Sánchez con tul"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
@@ -103,8 +103,8 @@ export function ChapterJuana() {
         </div>
         <div className="detail-img reveal delay-1">
           <Image
-            src="/assets/images/detail-encaje.jpg"
-            alt="Detalle de encaje hecho a mano"
+            src="/assets/images/juana-encaje.jpg"
+            alt="Guante de encaje hecho a mano Juana Sánchez"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
