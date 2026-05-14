@@ -76,7 +76,14 @@ export function LaunchCountdown() {
         </div>
 
         <div className="launch-visual reveal delay-1">
-          <video autoPlay muted loop playsInline preload="auto">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/assets/video/lolikas-poster.jpg"
+          >
             <source src="/assets/video/lolikas.mp4" type="video/mp4" />
           </video>
           <div className="launch-visual-top">
