@@ -4,8 +4,8 @@
 export const LAUNCH_TARGET_UTC = Date.UTC(2026, 4, 17, 16, 0, 0);
 
 export const CONTACT = {
-  // ⚠️ WhatsApp: el sitio real solo lista un fijo (968...) que no admite
-  // WhatsApp. Se mantiene el móvil del brief hasta confirmar el número real.
+  // WhatsApp confirmado por el cliente: +34 613 775 981 (el del brief).
+  // El fijo +34 968 70 57 22 (juanasanchez.es) es solo línea de tienda.
   whatsapp: "https://wa.me/34613775981",
   whatsappPrintellar:
     "https://wa.me/34613775981?text=Hola,%20quiero%20cotizar%20con%20Printellar",
