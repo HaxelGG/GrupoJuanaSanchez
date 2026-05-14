@@ -74,6 +74,41 @@
   --input:                  oklch(0.225 0.012 70 / 0.14);
   --ring:                   var(--color-mauve-deep);
   --radius:                 0.125rem;
+
+  /* ── Alias legacy del HTML spec → tokens del @theme (paleta OKLCH del §5.1).
+        Permiten portar el CSS del spec sin reescribir cada var(). ── */
+  --cream:      var(--color-cream);
+  --cream-warm: var(--color-cream-warm);
+  --cream-deep: var(--color-cream-deep);
+  --bone:       var(--color-bone);
+  --paper:      var(--color-paper);
+  --mauve:      var(--color-mauve);
+  --mauve-deep: var(--color-mauve-deep);
+  --rose-dust:  var(--color-rose-dust);
+  --rose-soft:  var(--color-rose-soft);
+  --mint:       var(--color-mint);
+  --mint-soft:  var(--color-mint-soft);
+  --mint-deep:  var(--color-mint-deep);
+  --peach:      var(--color-peach);
+  --black:      var(--color-black);
+  --black-warm: var(--color-black-warm);
+  --black-soft: oklch(0.205 0.010 70);
+  --gold:       var(--color-gold);
+  --gold-warm:  var(--color-gold-warm);
+  --gold-soft:  var(--color-gold-soft);
+  --ink:        var(--color-ink);
+  --ink-soft:   var(--color-ink-soft);
+  --ink-faint:  var(--color-ink-faint);
+  --ink-trace:  oklch(0.790 0.020 80);
+  --line:       oklch(0.225 0.012 70 / 0.14);
+  --line-soft:  oklch(0.225 0.012 70 / 0.06);
+  --display:    var(--font-display);
+  --serif:      var(--font-serif);
+  --serif-2:    var(--font-serif-2);
+  --sans:       var(--font-sans);
+  --mono:       var(--font-mono);
+  --pad-x:      var(--spacing-pad-x);
+  --pad-y:      var(--spacing-pad-y);
 }
 
 /* Exponer los tokens semánticos a las utilidades de Tailwind 4
@@ -112,9 +147,15 @@
   }
 
   html {
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Compensa la franja + nav fijas al saltar a un ancla. */
+  section[id] {
+    scroll-margin-top: 96px;
   }
 
   body {
