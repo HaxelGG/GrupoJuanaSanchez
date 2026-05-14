@@ -2040,6 +2040,17 @@
 .reveal { opacity: 0; transform: translateY(32px); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
+/* Reveal por clip-path en las imágenes de detalle (§7.7) — la imagen se
+   "barre" de izquierda a derecha al entrar al viewport, sin slide del contenedor. */
+.detail-img.reveal { opacity: 1; transform: none; }
+.detail-img img {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.detail-img.reveal.in img {
+  clip-path: inset(0 0 0 0);
+}
+
 /* Barra de progreso de scroll superior (§7.9) */
 .scroll-progress {
   position: fixed;

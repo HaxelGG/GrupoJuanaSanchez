@@ -8,11 +8,12 @@ import {
   jost,
   jetbrains,
 } from "@/lib/fonts";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
 import { SmoothScroll } from "@/components/primitives/SmoothScroll";
 import { SiteEffects } from "@/components/primitives/SiteEffects";
-import { MagneticCursor } from "@/components/primitives/MagneticCursor";
-import { FimiLiveBubble } from "@/components/sections/FimiLiveBubble";
+import { ClientOverlays } from "@/components/primitives/ClientOverlays";
 
 export const metadata: Metadata = {
   title: "Grupo Juana Sánchez — Cincuenta años cosiendo memoria",
@@ -48,14 +49,15 @@ export default function RootLayout({
       <body>
         {/* Sin JS los reveals quedarían invisibles — fallback. */}
         <noscript>
-          <style>{`.reveal{opacity:1;transform:none}`}</style>
+          <style>{`.reveal{opacity:1;transform:none}.detail-img img{clip-path:none}`}</style>
         </noscript>
         <SmoothScroll />
         <SiteEffects />
         {children}
-        <FimiLiveBubble />
-        <MagneticCursor />
+        <ClientOverlays />
         <Toaster position="bottom-center" />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
