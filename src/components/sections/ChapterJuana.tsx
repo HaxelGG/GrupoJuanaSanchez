@@ -42,21 +42,21 @@ export function ChapterJuana() {
       <div className="detail-strip">
         <div className="detail-img reveal">
           <Image
-            src="/assets/images/juana-corona.jpg"
-            alt="Corona artesanal Juana Sánchez con tul"
+            src="/assets/images/juana-detalle-rosa.jpg"
+            alt="Esparteñas de ceremonia Juana Sánchez, detalle artesanal"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 01 — Corona artesanal</div>
+          <div className="det-meta">Det. 01 — Esparteñas a mano</div>
         </div>
         <div className="detail-img reveal delay-1">
           <Image
-            src="/assets/images/juana-encaje.jpg"
-            alt="Guante de encaje hecho a mano Juana Sánchez"
+            src="/assets/images/juana-detalle-mint.jpg"
+            alt="Calzado de ceremonia Juana Sánchez, hecho a mano"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 02 — Encaje hecho a mano</div>
+          <div className="det-meta">Det. 02 — Calzado de ceremonia</div>
         </div>
       </div>
 
