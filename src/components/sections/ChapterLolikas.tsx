@@ -77,8 +77,8 @@ export function ChapterLolikas() {
       <div className="detail-strip">
         <div className="detail-img reveal">
           <Image
-            src="/assets/images/lolikas-paleta-nude.jpg"
-            alt="Paleta nude Lolikas — rosas crema"
+            src="/assets/images/lolikas-rosa.jpg"
+            alt="Accesorio Lolikas en rosa polvo, detalle artesanal"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
@@ -86,8 +86,8 @@ export function ChapterLolikas() {
         </div>
         <div className="detail-img reveal delay-1">
           <Image
-            src="/assets/images/lolikas-pieza-unica.jpg"
-            alt="Pieza única Lolikas"
+            src="/assets/images/lolikas-mint.jpg"
+            alt="Accesorio Lolikas en tono mint, pieza única"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
