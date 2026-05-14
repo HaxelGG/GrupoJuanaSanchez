@@ -18,7 +18,7 @@ type Step = {
 const STEPS: Step[] = [
   {
     year: "1975",
-    event: "Origen · Madrid",
+    event: "Origen · Caravaca de la Cruz",
     title: "Se funda la casa",
     desc: "Un taller pequeño con una convicción enorme: el detalle hecho a mano sostiene un día entero.",
     kind: "key",
@@ -31,7 +31,7 @@ const STEPS: Step[] = [
   },
   {
     year: "1986",
-    event: "FIMI · Valencia / Madrid",
+    event: "FIMI · Valencia",
     title: "Líderes en moda infantil de autor",
     desc: "Primera presencia en FIMI. Inicio de una historia ininterrumpida con la feria internacional de moda infantil.",
     kind: "key",
