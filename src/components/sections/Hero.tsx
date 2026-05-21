@@ -29,7 +29,7 @@ export function Hero() {
           </span>
           <span className="line">
             <span>
-              años <em>cosiendo</em>
+              años <em>creando</em>
             </span>
           </span>
           <span className="line">

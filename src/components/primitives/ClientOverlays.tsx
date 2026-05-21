@@ -13,6 +13,14 @@ const MagneticCursor = dynamic(
   { ssr: false },
 );
 
+const CursorStardust = dynamic(
+  () =>
+    import("@/components/primitives/CursorStardust").then(
+      (m) => m.CursorStardust,
+    ),
+  { ssr: false },
+);
+
 const FimiLiveBubble = dynamic(
   () =>
     import("@/components/sections/FimiLiveBubble").then((m) => m.FimiLiveBubble),
@@ -22,6 +30,7 @@ const FimiLiveBubble = dynamic(
 export function ClientOverlays() {
   return (
     <>
+      <CursorStardust />
       <MagneticCursor />
       <FimiLiveBubble />
     </>
