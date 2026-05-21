@@ -102,7 +102,6 @@ export const BOUTIQUES: Boutique[] = [
 ];
 
 export const NAV_LINKS = [
-  { href: "#legado", label: "Legado" },
   { href: "#juana", label: "Juana Sánchez" },
   { href: "#lolikas", label: "Lolikas" },
   { href: "#printellar", label: "Printelar" },
