@@ -16,6 +16,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { LAUNCH_LABEL } from "@/lib/site";
 
 const schema = z.object({
   email: z.email("Introduce un email válido."),
@@ -47,7 +48,7 @@ export function SubscribeDialog() {
         toast.error(data.error ?? "No se pudo registrar. Inténtalo de nuevo.");
         return;
       }
-      toast.success("Te avisaremos el 17 de mayo a las 18:00 CET.");
+      toast.success(`Te avisaremos el ${LAUNCH_LABEL.date} a las ${LAUNCH_LABEL.time}.`);
       reset();
       setOpen(false);
     } catch {
@@ -64,8 +65,8 @@ export function SubscribeDialog() {
             Sé de las primeras en verla
           </DialogTitle>
           <DialogDescription className="font-serif text-base text-ink-soft italic">
-            Te escribimos una sola vez: el 17 de mayo, cuando se abra la tienda.
-            Nada más.
+            Te escribimos una sola vez: el {LAUNCH_LABEL.date}, cuando se abra
+            la tienda. Nada más.
           </DialogDescription>
         </DialogHeader>
 

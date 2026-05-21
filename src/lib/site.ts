@@ -4,6 +4,15 @@
  *  (Aplazado desde el 17 de mayo.) */
 export const LAUNCH_TARGET_UTC = Date.UTC(2026, 5, 3, 16, 0, 0);
 
+/** Etiqueta legible del lanzamiento — FUENTE ÚNICA para el contador y el
+ *  formulario de aviso, para que nunca se desincronicen. Si cambias la fecha,
+ *  actualiza LAUNCH_TARGET_UTC y estas etiquetas a la vez. */
+export const LAUNCH_LABEL = {
+  date: "3 de junio",
+  time: "18:00 CEST",
+  short: "3 junio · 18:00",
+} as const;
+
 export const CONTACT = {
   // WhatsApp confirmado por el cliente: +34 613 775 981 (el del brief).
   // El fijo +34 968 70 57 22 (juanasanchez.es) es solo línea de tienda.

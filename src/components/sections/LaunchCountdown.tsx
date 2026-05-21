@@ -1,7 +1,7 @@
 // Sección · Lanzamiento + cuenta atrás. ⚠️ CRÍTICO (brief §8).
 // Countdown en vivo + captura de email operativos (Fase 2).
 import Image from "next/image";
-import { CONTACT, SHOPS } from "@/lib/site";
+import { CONTACT, SHOPS, LAUNCH_LABEL } from "@/lib/site";
 import { CountdownDigits } from "@/components/primitives/CountdownDigits";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
 import { MagneticLink } from "@/components/primitives/MagneticLink";
@@ -37,9 +37,9 @@ export function LaunchCountdown() {
           </h2>
 
           <p className="launch-sub reveal delay-2">
-            El 3 de junio, 18:00 hora peninsular, se abre la nueva tienda online
-            de Juana Sánchez con la colección que llevamos meses cosiendo. Sé de
-            las primeras en verla.
+            El {LAUNCH_LABEL.date}, 18:00 hora peninsular, se abre la nueva
+            tienda online de Juana Sánchez con la colección que llevamos meses
+            cosiendo. Sé de las primeras en verla.
           </p>
 
           <CountdownDigits />
@@ -61,7 +61,7 @@ export function LaunchCountdown() {
             <div className="launch-meta-row">
               <span className="lbl">Fecha</span>
               <span className="val">
-                <span className="big">3 junio · 18:00</span>
+                <span className="big">{LAUNCH_LABEL.short}</span>
                 Hora peninsular · CEST
               </span>
             </div>
