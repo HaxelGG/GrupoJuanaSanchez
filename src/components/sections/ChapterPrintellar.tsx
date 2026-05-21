@@ -1,5 +1,7 @@
 // Sección 11 · Capítulo Printellar — taller técnico · personalización.
-// Fondo negro + dorado. La transición de fondo del body llega en Fase 3.
+// Fondo marrón tabaco + dorado. CTA de cotización por WhatsApp.
+import { CONTACT } from "@/lib/site";
+import { MagneticLink } from "@/components/primitives/MagneticLink";
 
 const PRODUCTS: [string, string][] = [
   ["Estampación textil directa", "DTF · DTG"],
@@ -59,6 +61,20 @@ export function ChapterPrintellar() {
               <span className="lbl">Servicio</span>
               <span className="val">Cotización personalizada</span>
             </div>
+          </div>
+          <div className="printellar-cta reveal delay-3">
+            <MagneticLink
+              className="btn-primary"
+              href={CONTACT.whatsappPrintellar}
+              target="_blank"
+              rel="noopener"
+              strength={0.4}
+            >
+              Cotizar por WhatsApp
+              <span className="arr" aria-hidden>
+                →
+              </span>
+            </MagneticLink>
           </div>
         </div>
         <div className="taller-composition reveal delay-1">

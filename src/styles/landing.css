@@ -1197,6 +1197,37 @@
 .ch-printellar .product-row:nth-child(odd) { border-right-color: rgba(200, 163, 90, 0.12); }
 .ch-printellar .product-row .tag { color: var(--gold-warm); opacity: 0.85; }
 
+/* CTA de cotización — botón dorado sobre el fondo tabaco de Printellar. */
+.printellar-cta {
+  margin-top: clamp(28px, 3vw, 40px);
+}
+.printellar-cta .btn-primary {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 100px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gold);
+  color: var(--black);
+  border: 1px solid var(--gold);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+.printellar-cta .btn-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+}
+.printellar-cta .btn-primary .arr {
+  transition: transform 0.4s ease;
+}
+.printellar-cta .btn-primary:hover .arr {
+  transform: translateX(5px);
+}
+
 .taller-composition {
   position: sticky;
   top: 80px;
