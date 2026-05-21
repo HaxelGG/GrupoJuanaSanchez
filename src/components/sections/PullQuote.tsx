@@ -11,7 +11,7 @@ export function PullQuote() {
         que no caduca.
       </p>
       <div className="pullquote-attr reveal delay-1">
-        Grupo Juana Sánchez · MCMLXXV — MMXXVI
+        Grupo Juana Sánchez · 1975 — 2026
       </div>
     </section>
   );

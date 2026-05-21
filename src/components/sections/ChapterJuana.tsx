@@ -26,7 +26,7 @@ export function ChapterJuana() {
     <section className="chapter ch-juana" id="juana">
       <div className="chapter-intro">
         <div className="ch-num reveal">
-          Capítulo III
+          Capítulo 3
           <br />
           Casa madre · Ceremonia
         </div>

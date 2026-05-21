@@ -17,7 +17,7 @@ export function ChapterPrintellar() {
     <section className="chapter ch-printellar" id="printellar">
       <div className="chapter-intro">
         <div className="ch-num reveal">
-          Capítulo V
+          Capítulo 5
           <br />
           Taller técnico · Personalización
         </div>
@@ -64,7 +64,7 @@ export function ChapterPrintellar() {
         <div className="taller-composition reveal delay-1">
           <div className="taller-top">
             <span>PR · TALLER</span>
-            <span>MMXXVI</span>
+            <span>2026</span>
           </div>
           <div className="taller-bottom">
             <div className="surfaces">

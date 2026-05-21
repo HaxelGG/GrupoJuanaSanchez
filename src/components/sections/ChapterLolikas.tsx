@@ -16,7 +16,7 @@ export function ChapterLolikas() {
     <section className="chapter ch-lolikas" id="lolikas">
       <div className="chapter-intro">
         <div className="ch-num reveal">
-          Capítulo IV
+          Capítulo 4
           <br />
           La hermana joven · Moda
         </div>
@@ -65,7 +65,7 @@ export function ChapterLolikas() {
             src="/assets/video/lolikas.mp4"
             poster="/assets/video/lolikas-poster.jpg"
           />
-          <div className="img-meta">LK · MMXXVI · EDICIÓN · MOVIMIENTO</div>
+          <div className="img-meta">LK · 2026 · EDICIÓN · MOVIMIENTO</div>
         </div>
       </div>
 

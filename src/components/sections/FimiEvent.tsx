@@ -60,7 +60,7 @@ export function FimiEvent() {
             <div className="event-detail-row reveal delay-2">
               <span className="ed-lbl">Cuándo</span>
               <span className="ed-val">
-                <span className="big">15 — 16 mayo</span>MMXXVI
+                <span className="big">15 — 16 mayo</span>2026
               </span>
             </div>
             <div className="event-detail-row reveal delay-2">

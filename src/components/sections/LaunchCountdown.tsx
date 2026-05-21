@@ -88,7 +88,7 @@ export function LaunchCountdown() {
             poster="/assets/video/lolikas-poster.jpg"
           />
           <div className="launch-visual-top">
-            <span>JS · MMXXVI</span>
+            <span>JS · 2026</span>
             <span>EDICIÓN NUEVA</span>
           </div>
           <div className="launch-visual-bottom">

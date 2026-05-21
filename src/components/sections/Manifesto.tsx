@@ -3,7 +3,7 @@ export function Manifesto() {
   return (
     <section className="manifesto">
       <div className="manifesto-inner">
-        <div className="manifesto-eyebrow reveal">Capítulo VI · Filosofía</div>
+        <div className="manifesto-eyebrow reveal">Capítulo 6 · Filosofía</div>
         <p className="manifesto-text reveal delay-1">
           Hacemos lo mismo desde hace cincuenta años:
           <br />

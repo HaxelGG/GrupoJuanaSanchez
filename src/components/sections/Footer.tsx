@@ -26,7 +26,7 @@ export function Footer() {
               Tradición artesanal con visión contemporánea. Una sofisticación
               que trasciende generaciones.
             </p>
-            <div className="fb-since">EST · MCMLXXV · MURCIA</div>
+            <div className="fb-since">EST · 1975 · MURCIA</div>
           </div>
 
           <div className="footer-col">
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© MCMLXXV — MMXXVI · Todos los derechos reservados</span>
+          <span>© 1975 — 2026 · Todos los derechos reservados</span>
           <span className="footer-signature">— Hecho a mano, desde España</span>
         </div>
       </div>

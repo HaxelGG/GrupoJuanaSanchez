@@ -31,7 +31,9 @@ export function SiteEffects() {
             }
           }
         },
-        { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+        // threshold bajo + rootMargin inferior positivo → revela un poco antes
+        // de que el elemento entre del todo (las imágenes aparecen más rápido).
+        { threshold: 0.05, rootMargin: "0px 0px 140px 0px" },
       );
       revealEls.forEach((el) => io.observe(el));
     }
