@@ -1,49 +1,19 @@
-"use client";
-
-// Capítulo Juana Sánchez · bloque de storytelling con sticky scroll (brief §9 / §7.3).
-// El texto scrollea a la izquierda; el visual sticky de la derecha hace
-// crossfade entre 3 fotos reales de producto según el progreso de scroll.
-// prefers-reduced-motion → imagen única estática.
-import { useRef } from "react";
+// Capítulo Juana Sánchez · bloque de storytelling con visual sticky.
+// Imagen única y estable (antes había un crossfade entre 3 fotos según el
+// scroll, pero al detenerse a mitad se veían dos superpuestas → parecía un
+// error). Una sola foto limpia es más profesional y más ligero.
 import Image from "next/image";
-import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { SHOPS } from "@/lib/site";
 
-const IMAGES = [
-  {
-    src: "/assets/images/juana-ceremonia.jpg",
-    alt: "Esparteñas y corona de ceremonia Juana Sánchez, hechas a mano",
-  },
-  {
-    src: "/assets/images/juana-calzado.jpg",
-    alt: "Esparteñas de ceremonia Juana Sánchez, detalle artesanal",
-  },
-  {
-    src: "/assets/images/juana-conjunto.jpg",
-    alt: "Conjunto de ceremonia Juana Sánchez en rosa polvo",
-  },
-];
-
+const VISUAL = {
+  src: "/assets/images/juana-ceremonia.jpg",
+  alt: "Esparteñas y corona de ceremonia Juana Sánchez, hechas a mano",
+};
 const SIZES = "(max-width: 920px) 100vw, 700px";
 
 export function JuanaStory() {
-  const ref = useRef<HTMLDivElement>(null);
-  const reduced = useReducedMotion();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
-
-  // 3 capas con crossfade: cada foto domina ~un tercio del recorrido.
-  // Los hooks se llaman incondicionalmente (número fijo de imágenes).
-  const op0 = useTransform(scrollYProgress, [0, 0.3, 0.42], [1, 1, 0]);
-  const op1 = useTransform(scrollYProgress, [0.3, 0.42, 0.64, 0.76], [0, 1, 1, 0]);
-  const op2 = useTransform(scrollYProgress, [0.64, 0.76, 1], [0, 1, 1]);
-  const opacities = [op0, op1, op2];
-
   return (
-    <div className="chapter-story" ref={ref}>
+    <div className="chapter-story">
       <div className="story-text">
         <p className="tagline reveal">
           El primer día
@@ -99,19 +69,7 @@ export function JuanaStory() {
       </div>
 
       <div className="story-visual reveal delay-1">
-        {reduced ? (
-          <Image src={IMAGES[0].src} alt={IMAGES[0].alt} fill sizes={SIZES} />
-        ) : (
-          IMAGES.map((img, i) => (
-            <motion.div
-              key={img.src}
-              className="story-visual-layer"
-              style={{ opacity: opacities[i] }}
-            >
-              <Image src={img.src} alt={img.alt} fill sizes={SIZES} />
-            </motion.div>
-          ))
-        )}
+        <Image src={VISUAL.src} alt={VISUAL.alt} fill sizes={SIZES} />
         <div className="img-meta">JS · MURCIA · 1975</div>
       </div>
     </div>
