@@ -67,7 +67,7 @@ export function PullQuote() {
       </div>
 
       <div className="lt-shops-head reveal delay-1">
-        <span>Tres puertas. Tres mundos. La misma mano detrás.</span>
+        <span>Tres puertas. Tres mundos. Una misma maestría.</span>
         <span className="lt-shops-sub">
           Envíos a toda Europa · Pago seguro con tarjeta, PayPal o transferencia.
         </span>

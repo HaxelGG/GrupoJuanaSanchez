@@ -19,6 +19,9 @@ type Step = {
   imgAlt?: string;
 };
 
+// Timeline reducido a 4 hitos: del origen (1975) al hoy (2026). La trayectoria
+// intermedia (Barcelona Bridal 1998, Madrid 2003, Pasarela Cibeles 2012) se
+// resume estratégicamente en el hito 2026. Cada hito lleva una foto real.
 const STEPS: Step[] = [
   {
     year: "1975",
@@ -26,14 +29,17 @@ const STEPS: Step[] = [
     title: "Se funda la casa",
     desc: "Un taller pequeño con una convicción enorme: el detalle hecho a mano sostiene un día entero.",
     kind: "key",
-    img: "/assets/images/timeline/hito-1975.png",
-    imgAlt: "Ilustración del taller fundacional",
+    img: "/assets/images/timeline/hito-1975.jpg",
+    imgAlt: "Conjunto artesanal de ceremonia Juana Sánchez",
   },
   {
     year: "1983",
     event: "Consolidación",
     title: "Un hito en la industria",
-    desc: "La firma se consolida como casa de referencia en complementos de ceremonia.",
+    desc: "La firma se consolida como casa de referencia en complementos de ceremonia, novia y comunión.",
+    kind: "key",
+    img: "/assets/images/timeline/hito-1983.jpg",
+    imgAlt: "Esparteña de ceremonia con encaje y flores",
   },
   {
     year: "1986",
@@ -41,37 +47,17 @@ const STEPS: Step[] = [
     title: "Líderes en moda infantil de autor",
     desc: "Primera presencia en FIMI. Inicio de una historia ininterrumpida con la feria internacional de moda infantil.",
     kind: "key",
-  },
-  {
-    year: "1998",
-    event: "Novia España · Barcelona",
-    title: "La esencia de la novia artesanal",
-    desc: "Debut en Barcelona Bridal Week. La firma se afirma como referencia de la novia artesanal española.",
-    kind: "key",
-    img: "/assets/images/timeline/hito-1998.png",
-    imgAlt: "Ilustración de novia artesanal",
-  },
-  {
-    year: "2003",
-    event: "Puerta de Europa · Madrid",
-    title: "Proyección internacional",
-    desc: "Madrid acoge la presentación que define la sofisticación de la casa para el siguiente capítulo.",
-  },
-  {
-    year: "2012",
-    event: "Pasarela Cibeles · Madrid",
-    title: "El reconocimiento de la moda española",
-    desc: "Cibeles. La consagración nacional. La firma deja de ser una referencia y se convierte en una autoridad.",
-    kind: "key",
-    img: "/assets/images/timeline/hito-2012.png",
-    imgAlt: "Ilustración de pasarela",
+    img: "/assets/images/timeline/hito-1986.jpg",
+    imgAlt: "Esparteñas de ceremonia en tonos agua",
   },
   {
     year: "2026",
     event: "FIMI 40 · Valencia",
-    title: "Cuarenta años en FIMI",
-    desc: "Cuatro décadas después del primer FIMI, volvimos a Valencia con el mismo oficio y piezas nuevas. 15 y 16 de mayo.",
+    title: "Cuatro décadas en la cima",
+    desc: "De Barcelona Bridal (1998) a la proyección en Madrid y la consagración en la Pasarela Cibeles (2012): cuarenta años después del primer FIMI, volvemos con el mismo oficio y piezas nuevas.",
     kind: "now",
+    img: "/assets/images/timeline/hito-2026.jpg",
+    imgAlt: "Corona y tocado de ceremonia, edición de aniversario",
   },
 ];
 
