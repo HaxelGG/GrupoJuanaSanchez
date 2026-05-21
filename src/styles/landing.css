@@ -644,12 +644,13 @@
 .t-step:last-child { padding-right: var(--pad-x); }
 /* Ilustración decorativa (line-art) en la parte superior del hito.
    Espacio reservado en todos los pasos para mantener la alineación. */
-/* Foto real del hito — enmarcada, con parallax y zoom suave al pasar el cursor. */
+/* Foto del hito — enmarcada con parallax. Hover-only: solo se revela (fundido
+   + zoom suave) al pasar el cursor por el hito. */
 .t-step-fig {
   position: relative;
   width: 100%;
-  height: clamp(140px, 17vw, 220px);
-  margin-bottom: 22px;
+  height: clamp(120px, 15vw, 184px);
+  margin-bottom: 20px;
   overflow: hidden;
   border-radius: 2px;
   transform: translateY(var(--t-parallax, 0));
@@ -657,20 +658,18 @@
 }
 .t-step-fig img {
   object-fit: cover;
-  object-position: center top; /* recorta la marca de agua inferior */
+  object-position: center;
   filter: saturate(1.08) contrast(1.03);
-  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
-}
-.t-step-fig::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 58%, rgba(42, 38, 32, 0.12) 100%);
-  pointer-events: none;
-}
-.t-step:hover .t-step-fig img {
+  opacity: 0;
   transform: scale(1.06);
-  filter: saturate(1.16) contrast(1.05);
+  transition: opacity 0.7s ease,
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+}
+.t-step-fig.is-logo img { object-fit: contain; }
+.t-step:hover .t-step-fig img {
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1.14) contrast(1.05);
 }
 .t-dot {
   width: 12px; height: 12px;
@@ -2279,6 +2278,8 @@
   color: rgba(244, 239, 230, 0.4);
   text-transform: uppercase;
 }
+.footer-credit { opacity: 0.55; }
+.footer-credit a { color: inherit; text-decoration: underline; }
 .footer-signature {
   font-family: var(--serif);
   font-style: italic;

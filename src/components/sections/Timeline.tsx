@@ -14,9 +14,11 @@ type Step = {
   title: string;
   desc: string;
   kind?: "key" | "now";
-  /** Ilustración decorativa (line-art) que recrea el hito. */
+  /** Foto del hito (se revela al pasar el cursor). */
   img?: string;
   imgAlt?: string;
+  imgPos?: string; // object-position
+  imgLogo?: boolean; // logo → object-fit contain
 };
 
 // Timeline reducido a 4 hitos: del origen (1975) al hoy (2026). La trayectoria
@@ -29,8 +31,9 @@ const STEPS: Step[] = [
     title: "Se funda la casa",
     desc: "Un taller pequeño con una convicción enorme: el detalle hecho a mano sostiene un día entero.",
     kind: "key",
-    img: "/assets/images/timeline/hito-1975.jpg",
-    imgAlt: "Conjunto artesanal de ceremonia Juana Sánchez",
+    img: "/assets/logos/monograma-js.jpg",
+    imgAlt: "Monograma Juana Sánchez",
+    imgLogo: true,
   },
   {
     year: "1983",
@@ -38,8 +41,9 @@ const STEPS: Step[] = [
     title: "Un hito en la industria",
     desc: "La firma se consolida como casa de referencia en complementos de ceremonia, novia y comunión.",
     kind: "key",
-    img: "/assets/images/timeline/hito-1983.jpg",
-    imgAlt: "Esparteña de ceremonia con encaje y flores",
+    img: "/assets/images/girl-hero.jpg",
+    imgAlt: "Niña de comunión con corona artesanal Juana Sánchez",
+    imgPos: "center 20%",
   },
   {
     year: "1986",
@@ -47,8 +51,9 @@ const STEPS: Step[] = [
     title: "Líderes en moda infantil de autor",
     desc: "Primera presencia en FIMI. Inicio de una historia ininterrumpida con la feria internacional de moda infantil.",
     kind: "key",
-    img: "/assets/images/timeline/hito-1986.jpg",
-    imgAlt: "Esparteñas de ceremonia en tonos agua",
+    img: "/assets/images/timeline/feria-valencia.jpg",
+    imgAlt: "Feria Valencia, sede de FIMI (foto: Googledance, CC BY 3.0)",
+    imgPos: "44% 58%",
   },
   {
     year: "2026",
@@ -57,7 +62,8 @@ const STEPS: Step[] = [
     desc: "De Barcelona Bridal (1998) a la proyección en Madrid y la consagración en la Pasarela Cibeles (2012): cuarenta años después del primer FIMI, volvemos con el mismo oficio y piezas nuevas.",
     kind: "now",
     img: "/assets/images/timeline/hito-2026.jpg",
-    imgAlt: "Corona y tocado de ceremonia, edición de aniversario",
+    imgAlt: "Cuarenta años — collage de aniversario Juana Sánchez",
+    imgPos: "center",
   },
 ];
 
@@ -159,9 +165,18 @@ export function Timeline() {
               key={s.year}
               className={`t-step${s.kind ? ` is-${s.kind}` : ""}`}
             >
-              <div className="t-step-fig" aria-hidden={!s.img}>
+              <div
+                className={`t-step-fig${s.imgLogo ? " is-logo" : ""}`}
+                aria-hidden={!s.img}
+              >
                 {s.img && (
-                  <Image src={s.img} alt={s.imgAlt ?? ""} fill sizes="340px" />
+                  <Image
+                    src={s.img}
+                    alt={s.imgAlt ?? ""}
+                    fill
+                    sizes="340px"
+                    style={s.imgPos ? { objectPosition: s.imgPos } : undefined}
+                  />
                 )}
               </div>
               <div className="t-dot" />

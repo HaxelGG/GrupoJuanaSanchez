@@ -65,7 +65,20 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 1975 — 2026 · Todos los derechos reservados</span>
+          <span>
+            © 1975 — 2026 · Todos los derechos reservados
+            <span className="footer-credit">
+              {" "}· Imagen Feria Valencia:{" "}
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Feria_de_Valencia_en_Benimamet_-_Vista_desde_el_Camino_Nuevo_de_Paterna.JPG"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Googledance
+              </a>{" "}
+              (CC BY 3.0)
+            </span>
+          </span>
           <span className="footer-signature">— Hecho a mano, desde España</span>
         </div>
       </div>
