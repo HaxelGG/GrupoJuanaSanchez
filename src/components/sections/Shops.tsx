@@ -40,7 +40,7 @@ const SHOP_LIST: Shop[] = [
     href: CONTACT.whatsappPrintellar,
     tag: "03 — Personalización",
     mark: "PR",
-    name: "Printellar",
+    name: "Printelar",
     foot: "Cotizar por WhatsApp",
   },
 ];

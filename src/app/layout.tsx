@@ -18,12 +18,12 @@ import { ClientOverlays } from "@/components/primitives/ClientOverlays";
 export const metadata: Metadata = {
   title: "Grupo Juana Sánchez — Cincuenta años creando memoria",
   description:
-    "Un legado. Tres firmas. Cincuenta años fabricando lo único que no caduca. Juana Sánchez · Lolikas · Printellar. Caravaca de la Cruz, Murcia.",
+    "Un legado. Tres firmas. Cincuenta años fabricando lo único que no caduca. Juana Sánchez · Lolikas · Printelar. Caravaca de la Cruz, Murcia.",
   metadataBase: new URL("https://grupojuanasanchez.com"),
   openGraph: {
     title: "Grupo Juana Sánchez — Cincuenta años creando memoria",
     description:
-      "Un legado. Tres firmas. Cincuenta años fabricando lo único que no caduca. Juana Sánchez · Lolikas · Printellar.",
+      "Un legado. Tres firmas. Cincuenta años fabricando lo único que no caduca. Juana Sánchez · Lolikas · Printelar.",
     type: "website",
     locale: "es_ES",
   },

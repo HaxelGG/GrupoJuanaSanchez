@@ -24,7 +24,7 @@ export function ChapterPrintellar() {
           Taller técnico · Personalización
         </div>
         <h2 className="chapter-name reveal delay-1">
-          <em>Printellar.</em>
+          <em>Printelar.</em>
         </h2>
       </div>
 

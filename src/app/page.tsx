@@ -52,7 +52,7 @@ const jsonLd = {
     },
     {
       "@type": "Brand",
-      name: "Printellar",
+      name: "Printelar",
       slogan:
         "Artesanía técnica con sofisticación sin compromisos. La versión técnica y creativa del legado Juana Sánchez.",
     },

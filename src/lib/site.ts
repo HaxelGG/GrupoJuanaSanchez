@@ -96,6 +96,6 @@ export const NAV_LINKS = [
   { href: "#legado", label: "Legado" },
   { href: "#juana", label: "Juana Sánchez" },
   { href: "#lolikas", label: "Lolikas" },
-  { href: "#printellar", label: "Printellar" },
+  { href: "#printellar", label: "Printelar" },
   { href: "#tiendas", label: "Tiendas" },
 ] as const;

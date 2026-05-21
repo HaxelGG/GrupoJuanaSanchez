@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/site";
 import { WhatsAppNavButton } from "@/components/sections/WhatsAppNavButton";
 
-const DARK_SELECTORS = ["#lanzamiento", "#printellar", ".event"];
+// Printelar dejó de ser oscuro (ahora azul pastel) → fuera de los oscuros.
+const DARK_SELECTORS = ["#lanzamiento", ".event"];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);

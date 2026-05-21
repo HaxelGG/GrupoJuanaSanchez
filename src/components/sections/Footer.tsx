@@ -47,7 +47,7 @@ export function Footer() {
               lolikas.com
             </a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener">
-              printellar · cotizar
+              printelar · cotizar
             </a>
           </div>
 

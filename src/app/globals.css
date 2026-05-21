@@ -20,16 +20,20 @@
   --color-rose-dust:    oklch(0.805 0.045 18);
   --color-rose-soft:    oklch(0.870 0.034 22);
 
-  /* Lolikas · mint / turquesa + peach */
+  /* Lolikas · morado pastel (lavanda + orquídea) */
   --color-mint:         oklch(0.808 0.038 175);
   --color-mint-soft:    oklch(0.882 0.026 170);
   --color-mint-deep:    oklch(0.690 0.038 173);
   --color-peach:        oklch(0.860 0.054 50);
+  --color-lila:         oklch(0.880 0.045 305);
+  --color-lila-deep:    oklch(0.600 0.130 305);
 
-  /* Printellar · marrón tabaco + dorado (antes negro puro) */
+  /* Printelar · azul pastel + marino + índigo (contraste elegante) */
   --color-black:        oklch(0.135 0 0);
   --color-black-warm:   oklch(0.160 0.010 75);
-  --color-printellar:   oklch(0.235 0.030 66);
+  --color-printellar-soft:   oklch(0.905 0.045 240);
+  --color-printellar-deep:   oklch(0.320 0.060 255);
+  --color-printellar-accent: oklch(0.480 0.110 258);
   --color-gold:         oklch(0.728 0.107 78);
   --color-gold-warm:    oklch(0.660 0.105 70);
   --color-gold-soft:    oklch(0.800 0.084 80);
@@ -93,7 +97,11 @@
   --peach:      var(--color-peach);
   --black:      var(--color-black);
   --black-warm: var(--color-black-warm);
-  --printellar: var(--color-printellar);
+  --printellar-soft:   var(--color-printellar-soft);
+  --printellar-deep:   var(--color-printellar-deep);
+  --printellar-accent: var(--color-printellar-accent);
+  --lila:       var(--color-lila);
+  --lila-deep:  var(--color-lila-deep);
   --black-soft: oklch(0.205 0.010 70);
   --gold:       var(--color-gold);
   --gold-warm:  var(--color-gold-warm);

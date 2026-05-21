@@ -52,7 +52,7 @@ export function ChapterLolikas() {
             </div>
             <div className="story-meta-item">
               <span className="lbl">Paleta</span>
-              <span className="val">Pastel · Aguas · Rosas</span>
+              <span className="val">Pastel · Lilas · Rosas</span>
             </div>
             <div className="story-meta-item">
               <span className="lbl">Lenguaje</span>

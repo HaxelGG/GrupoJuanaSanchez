@@ -32,7 +32,7 @@ const CARDS: Card[] = [
     brand: "printellar",
     href: "#printellar",
     num: "03 — El taller técnico",
-    name: <em>Printellar</em>,
+    name: <em>Printelar</em>,
     tagline: "La precisión. Tu idea, exacta, sobre cualquier superficie.",
   },
 ];
