@@ -16,8 +16,8 @@ export function PuntosDeVenta() {
           <em>en persona.</em>
         </h2>
         <p className="serif-prose reveal delay-2">
-          Nuestras piezas se cosen para verse de cerca. Estas son las boutiques
-          que las llevan.
+          Nuestras piezas se fabrican para lucirse de cerca. Estas son las
+          boutiques que las llevan.
         </p>
       </div>
 
