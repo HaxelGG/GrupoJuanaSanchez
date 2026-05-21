@@ -68,9 +68,6 @@ export function PullQuote() {
 
       <div className="lt-shops-head reveal delay-1">
         <span>Tres puertas. Tres mundos. Una misma maestría.</span>
-        <span className="lt-shops-sub">
-          Envíos a toda Europa · Pago seguro con tarjeta, PayPal o transferencia.
-        </span>
       </div>
 
       <div className="shops-grid">
@@ -95,6 +92,10 @@ export function PullQuote() {
           </MagneticLink>
         ))}
       </div>
+
+      <p className="lt-shops-foot reveal delay-1">
+        Envíos a toda Europa · Pago seguro con tarjeta, PayPal o transferencia.
+      </p>
     </section>
   );
 }

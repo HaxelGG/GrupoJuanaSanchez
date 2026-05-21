@@ -6,6 +6,7 @@
 // (la página es estática) — por defecto muestra la cuenta atrás.
 import { useEffect, useState } from "react";
 import { EVENTS, getEventStatus } from "@/lib/events";
+import { LAUNCH_LABEL } from "@/lib/site";
 
 export function EventStrip() {
   const [launched, setLaunched] = useState(false);
@@ -25,7 +26,7 @@ export function EventStrip() {
         </>
       ) : (
         <>
-          <strong>Nueva colección · 3 Junio · 18:00</strong>
+          <strong>Nueva colección · {LAUNCH_LABEL.short}</strong>
           <span className="sep">·</span>
           <span className="hide-mob">Cuenta atrás en directo</span>
           <span className="hide-mob sep">·</span>
