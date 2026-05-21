@@ -70,6 +70,9 @@ export function Timeline() {
   const railRef = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  // ¿La línea desborda y hace falta desplazarse? En desktop ancho suele verse
+  // entera (max <= 0) → no mostramos el aviso de deslizar ni las flechas.
+  const [hasOverflow, setHasOverflow] = useState(false);
 
   const sync = useCallback(() => {
     const t = trackRef.current;
@@ -80,6 +83,7 @@ export function Timeline() {
     railRef.current?.style.setProperty("--rail-progress", String(progress));
     setAtStart(t.scrollLeft <= 1);
     setAtEnd(t.scrollLeft >= max - 1);
+    setHasOverflow(max > 1);
   }, []);
 
   useEffect(() => {
@@ -157,33 +161,39 @@ export function Timeline() {
         </div>
       </div>
 
-      <div className="timeline-foot">
-        <div className="timeline-cue">Desliza o usa las flechas</div>
-        <div className="timeline-controls">
-          <button
-            type="button"
-            className="t-ctrl"
-            onClick={() => scrollByStep(-1)}
-            disabled={atStart}
-            aria-label="Hito anterior"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-              <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            className="t-ctrl"
-            onClick={() => scrollByStep(1)}
-            disabled={atEnd}
-            aria-label="Hito siguiente"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-              <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+      {hasOverflow && (
+        <div className="timeline-foot">
+          <div className="timeline-cue">
+            {/* Táctil: se desliza. Mouse (desktop): solo flechas. */}
+            <span className="cue-touch">Desliza o usa las flechas</span>
+            <span className="cue-pointer">Usa las flechas</span>
+          </div>
+          <div className="timeline-controls">
+            <button
+              type="button"
+              className="t-ctrl"
+              onClick={() => scrollByStep(-1)}
+              disabled={atStart}
+              aria-label="Hito anterior"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+                <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="t-ctrl"
+              onClick={() => scrollByStep(1)}
+              disabled={atEnd}
+              aria-label="Hito siguiente"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+                <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }

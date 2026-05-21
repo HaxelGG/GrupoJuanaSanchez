@@ -22,13 +22,28 @@ export function PuntosDeVenta() {
       </div>
 
       <div className="puntos-grid reveal delay-1">
-        {BOUTIQUES.map((b) => (
-          <div className="punto-row" key={b.name}>
-            <span className="punto-name">{b.name}</span>
-            <span className="punto-address">{b.address}</span>
-            <span className="punto-city">{b.city}</span>
-          </div>
-        ))}
+        {BOUTIQUES.map((b) => {
+          const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            `${b.name}, ${b.address}, ${b.city}`,
+          )}`;
+          return (
+            <a
+              className="punto-row"
+              key={b.name}
+              href={mapsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver ${b.name} en Google Maps`}
+            >
+              <span className="punto-name">{b.name}</span>
+              <span className="punto-address">{b.address}</span>
+              <span className="punto-city">
+                {b.city}
+                <span className="punto-maps">Cómo llegar →</span>
+              </span>
+            </a>
+          );
+        })}
       </div>
     </section>
   );

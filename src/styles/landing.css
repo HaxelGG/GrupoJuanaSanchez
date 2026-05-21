@@ -702,6 +702,13 @@
   gap: 12px;
 }
 .timeline-cue::before { content: '→'; font-size: 14px; letter-spacing: 0; }
+/* Por defecto (táctil / sin hover): mostramos "Desliza o usa las flechas". */
+.timeline-cue .cue-pointer { display: none; }
+/* En desktop con mouse no se desliza: solo "Usa las flechas". */
+@media (hover: hover) and (pointer: fine) {
+  .timeline-cue .cue-touch { display: none; }
+  .timeline-cue .cue-pointer { display: inline; }
+}
 
 .timeline-controls {
   display: flex;
@@ -757,7 +764,7 @@
   max-width: 1400px;
   margin: 0 auto 100px;
   display: grid;
-  grid-template-columns: 200px 1fr 280px;
+  grid-template-columns: 200px 1fr 360px;
   gap: clamp(40px, 6vw, 100px);
   align-items: end;
 }
@@ -776,7 +783,13 @@
   font-weight: 300;
   color: var(--mauve-deep);
 }
-.trio-head .serif-prose { align-self: end; padding-bottom: 12px; }
+.trio-head .serif-prose {
+  align-self: end;
+  padding-bottom: 12px;
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1.4;
+  max-width: none;
+}
 .trio-grid {
   max-width: 1400px;
   margin: 0 auto;
@@ -930,6 +943,17 @@
   font-style: italic;
   font-size: 18px;
   color: var(--ink);
+}
+.story-meta-item .val a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.story-meta-item .val a:hover {
+  color: var(--mauve-deep);
+  border-color: var(--mauve);
 }
 .story-visual {
   position: sticky;
@@ -1517,10 +1541,10 @@
 }
 .shops-head {
   max-width: 1400px;
-  margin: 0 auto 80px;
+  margin: 0 auto 56px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 6vw, 100px);
+  gap: clamp(32px, 4vw, 64px);
   align-items: end;
 }
 .shops-head h3 {
@@ -1540,11 +1564,11 @@
 .shops-head p {
   font-family: var(--sans);
   font-weight: 300;
-  font-size: clamp(15px, 1.1vw, 17px);
-  line-height: 1.8;
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.65;
   color: var(--ink-soft);
-  max-width: 44ch;
-  padding-bottom: 12px;
+  max-width: 46ch;
+  padding-bottom: 10px;
 }
 .shops-grid {
   max-width: 1400px;
@@ -1963,12 +1987,33 @@
   gap: 3px;
   padding: 18px 0;
   border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: padding-left 0.3s ease, border-color 0.3s ease;
+}
+.punto-row:hover {
+  padding-left: 10px;
+  border-color: var(--mauve);
+}
+.punto-row:focus-visible {
+  outline: 2px solid var(--mauve-deep);
+  outline-offset: 4px;
 }
 .punto-name {
   font-family: var(--serif);
   font-size: clamp(16px, 1.3vw, 19px);
   color: var(--ink);
+  transition: color 0.3s ease;
 }
+.punto-row:hover .punto-name { color: var(--mauve-deep); }
+.punto-maps {
+  margin-left: 12px;
+  color: var(--mauve-deep);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.punto-row:hover .punto-maps { opacity: 1; }
 .punto-address {
   font-family: var(--sans);
   font-weight: 300;

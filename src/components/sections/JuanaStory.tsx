@@ -7,6 +7,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
+import { SHOPS } from "@/lib/site";
 
 const IMAGES = [
   {
@@ -81,8 +82,18 @@ export function JuanaStory() {
             <span className="val">Hecho a mano · Bajo pedido</span>
           </div>
           <div className="story-meta-item">
-            <span className="lbl">Distribución</span>
-            <span className="val">Boutiques selectas en España</span>
+            <span className="lbl">Venta directa</span>
+            <span className="val">
+              <a href={SHOPS.juana} target="_blank" rel="noopener">
+                juanasanchez.es
+              </a>
+            </span>
+          </div>
+          <div className="story-meta-item">
+            <span className="lbl">Boutiques</span>
+            <span className="val">
+              <a href="#puntos-de-venta">Selectas en España</a>
+            </span>
           </div>
         </div>
       </div>

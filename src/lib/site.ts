@@ -91,11 +91,6 @@ export const BOUTIQUES: Boutique[] = [
   },
 ];
 
-/** Ciudades únicas para el marquee del footer, en orden de aparición. */
-export const BOUTIQUE_CITIES: string[] = [
-  ...new Set(BOUTIQUES.map((b) => b.city.split(",")[0].trim())),
-];
-
 export const NAV_LINKS = [
   { href: "#legado", label: "Legado" },
   { href: "#juana", label: "Juana Sánchez" },

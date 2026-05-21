@@ -1,25 +1,10 @@
-// Sección · Footer — marquee de boutiques (CSS-only) + 4 columnas.
+// Sección · Footer — 4 columnas.
 import Image from "next/image";
-import { BOUTIQUE_CITIES, CONTACT, SHOPS } from "@/lib/site";
+import { CONTACT, SHOPS } from "@/lib/site";
 
 export function Footer() {
-  // Doble pasada de ciudades para el loop sin costura del marquee.
-  const cities = [...BOUTIQUE_CITIES, ...BOUTIQUE_CITIES];
-
   return (
     <footer className="site-footer">
-      <div className="boutiques-strip">
-        <div className="marquee-track">
-          {cities.map((city, i) => (
-            <span className="boutique" key={`${city}-${i}`}>
-              {i === 0 && <span className="num">01</span>}
-              {city}
-              <span className="sep" />
-            </span>
-          ))}
-        </div>
-      </div>
-
       <div className="footer-inner">
         <div className="footer-top">
           <div className="footer-brand">
