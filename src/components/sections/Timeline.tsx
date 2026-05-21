@@ -6,6 +6,7 @@
 // Lenis) + rail que se rellena en malva según el progreso.
 // Móvil: lista vertical (sin scroll horizontal).
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type Step = {
   year: string;
@@ -13,6 +14,9 @@ type Step = {
   title: string;
   desc: string;
   kind?: "key" | "now";
+  /** Ilustración decorativa (line-art) que recrea el hito. */
+  img?: string;
+  imgAlt?: string;
 };
 
 const STEPS: Step[] = [
@@ -22,6 +26,8 @@ const STEPS: Step[] = [
     title: "Se funda la casa",
     desc: "Un taller pequeño con una convicción enorme: el detalle hecho a mano sostiene un día entero.",
     kind: "key",
+    img: "/assets/images/timeline/hito-1975.png",
+    imgAlt: "Ilustración del taller fundacional",
   },
   {
     year: "1983",
@@ -42,6 +48,8 @@ const STEPS: Step[] = [
     title: "La esencia de la novia artesanal",
     desc: "Debut en Barcelona Bridal Week. La firma se afirma como referencia de la novia artesanal española.",
     kind: "key",
+    img: "/assets/images/timeline/hito-1998.png",
+    imgAlt: "Ilustración de novia artesanal",
   },
   {
     year: "2003",
@@ -55,6 +63,8 @@ const STEPS: Step[] = [
     title: "El reconocimiento de la moda española",
     desc: "Cibeles. La consagración nacional. La firma deja de ser una referencia y se convierte en una autoridad.",
     kind: "key",
+    img: "/assets/images/timeline/hito-2012.png",
+    imgAlt: "Ilustración de pasarela",
   },
   {
     year: "2026",
@@ -66,6 +76,7 @@ const STEPS: Step[] = [
 ];
 
 export function Timeline() {
+  const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
@@ -105,6 +116,31 @@ export function Timeline() {
     };
   }, [sync]);
 
+  // Parallax vertical sutil de las ilustraciones: la capa deriva a distinta
+  // velocidad que la página al hacer scroll. Desactivado en reduce-motion.
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight || 1;
+        const p = (vh / 2 - (rect.top + rect.height / 2)) / vh;
+        section.style.setProperty("--t-parallax", `${(p * 40).toFixed(1)}px`);
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   const scrollByStep = (dir: 1 | -1) => {
     const t = trackRef.current;
     if (!t) return;
@@ -114,7 +150,7 @@ export function Timeline() {
   };
 
   return (
-    <section className="timeline-section">
+    <section className="timeline-section" ref={sectionRef}>
       <div className="timeline-head">
         <h2 className="reveal">
           Una trayectoria
@@ -137,6 +173,11 @@ export function Timeline() {
               key={s.year}
               className={`t-step${s.kind ? ` is-${s.kind}` : ""}`}
             >
+              <div className="t-step-fig" aria-hidden={!s.img}>
+                {s.img && (
+                  <Image src={s.img} alt={s.imgAlt ?? ""} fill sizes="340px" />
+                )}
+              </div>
               <div className="t-dot" />
               <div className="t-year">{s.year}</div>
               <span className="t-event">{s.event}</span>
