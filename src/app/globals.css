@@ -28,12 +28,12 @@
   --color-lila:         oklch(0.880 0.045 305);
   --color-lila-deep:    oklch(0.600 0.130 305);
 
-  /* Printelar · azul pastel + marino + índigo (contraste elegante) */
+  /* Printelar · dorado claro (champán) + teal/petróleo (contraste elegante) */
   --color-black:        oklch(0.135 0 0);
   --color-black-warm:   oklch(0.160 0.010 75);
-  --color-printellar-soft:   oklch(0.905 0.045 240);
-  --color-printellar-deep:   oklch(0.320 0.060 255);
-  --color-printellar-accent: oklch(0.480 0.110 258);
+  --color-printellar-soft:   oklch(0.952 0.035 92);
+  --color-printellar-deep:   oklch(0.300 0.052 198);
+  --color-printellar-accent: oklch(0.440 0.085 197);
   --color-gold:         oklch(0.728 0.107 78);
   --color-gold-warm:    oklch(0.660 0.105 70);
   --color-gold-soft:    oklch(0.800 0.084 80);

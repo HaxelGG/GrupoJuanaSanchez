@@ -10,7 +10,6 @@ import { ChapterJuana } from "@/components/sections/ChapterJuana";
 import { ChapterLolikas } from "@/components/sections/ChapterLolikas";
 import { ChapterPrintellar } from "@/components/sections/ChapterPrintellar";
 import { Manifesto } from "@/components/sections/Manifesto";
-import { Shops } from "@/components/sections/Shops";
 import { PuntosDeVenta } from "@/components/sections/PuntosDeVenta";
 import { Footer } from "@/components/sections/Footer";
 
@@ -99,7 +98,6 @@ export default function Home() {
         <ChapterLolikas />
         <ChapterPrintellar />
         <Manifesto />
-        <Shops />
         <PuntosDeVenta />
       </main>
       <Footer />
