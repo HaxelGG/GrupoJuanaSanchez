@@ -32,7 +32,7 @@ export function LaunchCountdown() {
           </h2>
 
           <p className="launch-sub reveal delay-2">
-            El 17 de mayo, 18:00 hora peninsular, se abre la nueva tienda online
+            El 3 de junio, 18:00 hora peninsular, se abre la nueva tienda online
             de Juana Sánchez con la colección que llevamos meses cosiendo. Sé de
             las primeras en verla.
           </p>
@@ -56,8 +56,8 @@ export function LaunchCountdown() {
             <div className="launch-meta-row">
               <span className="lbl">Fecha</span>
               <span className="val">
-                <span className="big">17 mayo · 18:00</span>
-                Hora peninsular · CET
+                <span className="big">3 junio · 18:00</span>
+                Hora peninsular · CEST
               </span>
             </div>
             <div className="launch-meta-row">
@@ -85,7 +85,7 @@ export function LaunchCountdown() {
               <br />
               Las piezas, en silencio.
             </div>
-            <div className="right">17 / 05</div>
+            <div className="right">03 / 06</div>
           </div>
         </div>
       </div>

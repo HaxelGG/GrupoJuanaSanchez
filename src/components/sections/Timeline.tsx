@@ -58,9 +58,9 @@ const STEPS: Step[] = [
   },
   {
     year: "2026",
-    event: "FIMI 40 · Esta semana",
-    title: "Pabellón 8 — Stand C35",
-    desc: "Cuarenta años después del primer FIMI. Aquí estamos, mismo oficio, nuevas piezas. 15 y 16 de mayo.",
+    event: "FIMI 40 · Valencia",
+    title: "Cuarenta años en FIMI",
+    desc: "Cuatro décadas después del primer FIMI, volvimos a Valencia con el mismo oficio y piezas nuevas. 15 y 16 de mayo.",
     kind: "now",
   },
 ];

@@ -1164,7 +1164,7 @@
 
 /* ── CHAPTER — Printellar (negro + dorado) ──────────────────────────── */
 .ch-printellar {
-  background: var(--black);
+  background: var(--printellar);
   color: var(--cream);
   position: relative;
   isolation: isolate;
@@ -1603,7 +1603,7 @@
 }
 .shop-btn[data-brand="js"]::before { background: var(--mauve-deep); }
 .shop-btn[data-brand="lolikas"]::before { background: var(--mint-deep); }
-.shop-btn[data-brand="printellar"]::before { background: var(--black); }
+.shop-btn[data-brand="printellar"]::before { background: var(--printellar); }
 .shop-btn > * { position: relative; z-index: 1; transition: color 0.5s ease; }
 .shop-btn:hover::before { transform: translateY(0); }
 .shop-btn:hover > * { color: var(--cream); }
@@ -2253,7 +2253,7 @@ body {
   transition: background-color 1.2s ease;
 }
 body.is-dark-section {
-  background-color: var(--black);
+  background-color: var(--printellar);
 }
 
 /* Nav — agrupador derecho: links + botón WhatsApp + hamburguesa */

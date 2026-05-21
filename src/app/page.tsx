@@ -10,7 +10,6 @@ import { ChapterJuana } from "@/components/sections/ChapterJuana";
 import { ChapterLolikas } from "@/components/sections/ChapterLolikas";
 import { ChapterPrintellar } from "@/components/sections/ChapterPrintellar";
 import { Manifesto } from "@/components/sections/Manifesto";
-import { FimiEvent } from "@/components/sections/FimiEvent";
 import { Shops } from "@/components/sections/Shops";
 import { PuntosDeVenta } from "@/components/sections/PuntosDeVenta";
 import { Footer } from "@/components/sections/Footer";
@@ -87,12 +86,10 @@ export default function Home() {
       />
       <EventStrip />
       <Nav />
-      {/* Orden según addendum v2 §1.1 — FimiEvent en el puesto 4 mientras
-          FIMI no haya terminado; al terminar se autodestruye y LaunchCountdown
-          ocupa su lugar de forma natural. */}
+      {/* FIMI 2026 (15-16 may) ya pasó: queda como último hito en el Timeline.
+          El lanzamiento (3 jun) lidera ahora el flujo tras el Hero. */}
       <main>
         <Hero />
-        <FimiEvent />
         <LaunchCountdown />
         <Declaration />
         <PullQuote />

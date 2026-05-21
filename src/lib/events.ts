@@ -36,9 +36,9 @@ export const EVENTS: Record<string, EventConfig> = {
     shortLabel: "Nueva colección",
     where: "juanasanchez.es",
     whereShort: "Tienda online",
-    // 17 mayo 18:00 CEST → 17 mayo 16:00 UTC
-    start: new Date(Date.UTC(2026, 4, 17, 16, 0, 0)),
-    end: new Date(Date.UTC(2026, 4, 24, 16, 0, 0)), // 7 días post-launch
+    // Aplazado del 17 may al 3 jun. 18:00 CEST → 16:00 UTC.
+    start: new Date(Date.UTC(2026, 5, 3, 16, 0, 0)),
+    end: new Date(Date.UTC(2026, 5, 10, 16, 0, 0)), // 7 días post-launch
     ctaUrl: "https://www.juanasanchez.es",
   },
 };

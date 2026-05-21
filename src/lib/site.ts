@@ -1,7 +1,8 @@
 // Constantes del sitio — Grupo Juana Sánchez.
 
-/** Lanzamiento tienda Juana Sánchez: 17 may 2026 · 18:00 CEST (16:00 UTC). */
-export const LAUNCH_TARGET_UTC = Date.UTC(2026, 4, 17, 16, 0, 0);
+/** Lanzamiento tienda Juana Sánchez: 3 jun 2026 · 18:00 CEST (16:00 UTC).
+ *  (Aplazado desde el 17 de mayo.) */
+export const LAUNCH_TARGET_UTC = Date.UTC(2026, 5, 3, 16, 0, 0);
 
 export const CONTACT = {
   // WhatsApp confirmado por el cliente: +34 613 775 981 (el del brief).
