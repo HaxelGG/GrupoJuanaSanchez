@@ -9,7 +9,7 @@ export const CONTACT = {
   // El fijo +34 968 70 57 22 (juanasanchez.es) es solo línea de tienda.
   whatsapp: "https://wa.me/34613775981",
   whatsappPrintellar:
-    "https://wa.me/34613775981?text=Hola,%20quiero%20cotizar%20con%20Printellar",
+    "https://wa.me/34613775981?text=Hola,%20quiero%20cotizar%20con%20Printelar",
   whatsappDisplay: "+34 613 775 981",
   phone: "+34 968 70 57 22",
   phoneTel: "+34968705722",
