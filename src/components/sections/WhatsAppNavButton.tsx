@@ -26,7 +26,7 @@ export function WhatsAppNavButton() {
       className="
         group inline-flex items-center gap-2 rounded-full
         border border-ink/15 px-3 py-2 md:px-4
-        font-mono text-[10px] tracking-[0.25em] uppercase
+        font-mono text-[11px] tracking-[0.25em] uppercase
         text-ink/70 transition-colors duration-300
         hover:border-mauve/40 hover:bg-mauve/5 hover:text-mauve-deep
         [.on-dark_&]:border-gold/30 [.on-dark_&]:text-cream/70

@@ -84,7 +84,7 @@ export function SubscribeDialog() {
               {...register("email")}
             />
             {errors.email && (
-              <p className="font-mono text-[11px] tracking-wide text-destructive">
+              <p className="font-mono text-[12px] tracking-wide text-destructive">
                 {errors.email.message}
               </p>
             )}
@@ -93,12 +93,12 @@ export function SubscribeDialog() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="font-mono text-[10px] tracking-[0.25em] uppercase bg-mauve-deep text-cream px-6 py-3.5 transition-colors hover:bg-mauve disabled:opacity-60"
+            className="font-mono text-[11px] tracking-[0.25em] uppercase bg-mauve-deep text-cream px-6 py-3.5 transition-colors hover:bg-mauve disabled:opacity-60"
           >
             {isSubmitting ? "Enviando…" : "Avísame"}
           </button>
 
-          <p className="font-mono text-[10px] tracking-wide text-ink-faint">
+          <p className="font-mono text-[11px] tracking-wide text-ink-faint">
             Sin spam. Solo el aviso del lanzamiento.
           </p>
         </form>
