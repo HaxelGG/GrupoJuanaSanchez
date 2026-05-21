@@ -1848,7 +1848,11 @@
 /* El "juanasanchez.es" de la fila Dónde es un link, pero mantiene el look
    del texto grande crema; solo añade un subrayado dorado sutil + hover. */
 .launch-meta-row .val a.big {
-  display: inline-block;
+  /* block → ocupa su propia línea (igual que la fila "Fecha"), así
+     "Nueva tienda online" baja debajo; width: fit-content → el subrayado
+     abraza solo el texto, no toda la columna. */
+  display: block;
+  width: fit-content;
   color: var(--cream);
   border-bottom: 1px solid rgba(200, 163, 90, 0.45);
   padding-bottom: 2px;
