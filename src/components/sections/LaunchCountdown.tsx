@@ -1,5 +1,6 @@
 // Sección · Lanzamiento + cuenta atrás. ⚠️ CRÍTICO (brief §8).
 // Countdown en vivo + captura de email operativos (Fase 2).
+import Image from "next/image";
 import { CONTACT } from "@/lib/site";
 import { CountdownDigits } from "@/components/primitives/CountdownDigits";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
@@ -10,9 +11,13 @@ export function LaunchCountdown() {
   return (
     <section className="launch" id="lanzamiento">
       <div className="launch-bg">
-        <AutoplayVideo
-          src="/assets/video/lolikas.mp4"
-          poster="/assets/video/lolikas-poster.jpg"
+        {/* Fondo estático (al 32% de opacidad tras un degradado oscuro): no
+            justifica decodificar un 2.º video — usamos el póster. */}
+        <Image
+          src="/assets/video/lolikas-poster.jpg"
+          alt=""
+          fill
+          sizes="100vw"
         />
       </div>
 

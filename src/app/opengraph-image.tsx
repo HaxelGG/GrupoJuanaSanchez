@@ -84,7 +84,7 @@ export default async function OpengraphImage() {
                 maxWidth: 760,
               }}
             >
-              Un legado. Tres firmas. Cincuenta años cosiendo lo único que no
+              Un legado. Tres firmas. Cincuenta años fabricando lo único que no
               caduca.
             </div>
           </div>

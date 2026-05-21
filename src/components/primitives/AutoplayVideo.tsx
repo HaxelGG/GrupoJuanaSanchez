@@ -41,7 +41,7 @@ export function AutoplayVideo({ src, poster }: AutoplayVideoProps) {
   return (
     // Sin atributo autoPlay: el IntersectionObserver controla play/pause.
     // muted es obligatorio para que play() programático funcione sin gesto.
-    <video ref={ref} muted loop playsInline preload="metadata" poster={poster}>
+    <video ref={ref} muted loop playsInline preload="none" poster={poster}>
       <source src={src} type="video/mp4" />
     </video>
   );

@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Grupo Juana Sánchez",
     short_name: "Juana Sánchez",
     description:
-      "Un legado. Tres firmas. Cincuenta años cosiendo lo único que no caduca.",
+      "Un legado. Tres firmas. Cincuenta años fabricando lo único que no caduca.",
     start_url: "/",
     display: "standalone",
     background_color: "#F4EFE6",

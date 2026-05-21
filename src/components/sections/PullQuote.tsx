@@ -6,7 +6,7 @@ export function PullQuote() {
       <p className="pullquote-text reveal">
         Un <strong>legado.</strong> Tres firmas.
         <br />
-        Cincuenta años <em>cosiendo</em> lo único
+        Cincuenta años <em>fabricando</em> lo único
         <br />
         que no caduca.
       </p>
