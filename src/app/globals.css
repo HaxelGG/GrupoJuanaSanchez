@@ -39,6 +39,8 @@
   --color-gold-soft:    oklch(0.800 0.084 80);
   /* Dorado muy claro (champán) — fondo del banner y de la sección del contador */
   --color-champagne:    oklch(0.952 0.035 92);
+  /* Ciruela/malva oscuro — fondo del footer (en vez de negro puro) */
+  --color-footer:       oklch(0.295 0.045 345);
 
   /* Tinta */
   --color-ink:          oklch(0.225 0.012 70);
@@ -109,6 +111,7 @@
   --gold-warm:  var(--color-gold-warm);
   --gold-soft:  var(--color-gold-soft);
   --champagne:  var(--color-champagne);
+  --footer:     var(--color-footer);
   --ink:        var(--color-ink);
   --ink-soft:   var(--color-ink-soft);
   --ink-faint:  var(--color-ink-faint);

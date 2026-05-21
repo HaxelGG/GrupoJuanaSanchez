@@ -33,14 +33,14 @@ export function Hero() {
         </h1>
 
         <div className="hero-bottom">
-          <p className="hero-sub">
-            Tres firmas. Una sola mano. Medio siglo aprendiendo a cuidar el
-            detalle que convierte un día cualquiera en uno que se recuerda.
-          </p>
           <div className="hero-cue">
             <span>Descender</span>
             <div className="line-vert" />
           </div>
+          <p className="hero-sub">
+            Tres firmas. Una sola mano. Medio siglo aprendiendo a cuidar el
+            detalle que convierte un día cualquiera en uno que se recuerda.
+          </p>
         </div>
       </div>
     </section>
