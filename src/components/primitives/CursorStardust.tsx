@@ -25,12 +25,12 @@ type Particle = {
 const MAX = 70; // techo de partículas vivas
 const SPAWN_DIST = 5; // px mínimos de movimiento entre spawns
 
-// Paleta de dorados de medio a oscuro — legible sobre el crema claro de la
-// página Y sobre el oscuro de Printellar. (Sin crema: se perdía en el fondo.)
+// Paleta de azules brillantes tipo estrella — legible sobre el crema claro de
+// la página Y vibrante sobre el oscuro de Printellar.
 const COLORS = [
-  [201, 163, 90], // gold
-  [176, 134, 66], // gold-warm
-  [150, 110, 48], // deep gold
+  [60, 110, 245], // azul eléctrico
+  [28, 66, 200], // zafiro oscuro
+  [120, 165, 255], // destello azul claro (estrella)
 ];
 
 /** Sprite radial suave (punto de polvo) en un canvas reutilizable. */
