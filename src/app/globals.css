@@ -31,7 +31,7 @@
   /* Printelar · dorado claro (champán) + teal/petróleo (contraste elegante) */
   --color-black:        oklch(0.135 0 0);
   --color-black-warm:   oklch(0.160 0.010 75);
-  --color-printellar-soft:   oklch(0.952 0.035 92);
+  --color-printellar-soft:   oklch(0.915 0.040 195);
   --color-printellar-deep:   oklch(0.300 0.052 198);
   --color-printellar-accent: oklch(0.440 0.085 197);
   --color-gold:         oklch(0.728 0.107 78);
@@ -39,6 +39,8 @@
   --color-gold-soft:    oklch(0.800 0.084 80);
   /* Dorado muy claro (champán) — fondo del banner y de la sección del contador */
   --color-champagne:    oklch(0.952 0.035 92);
+  /* Malva/rosa claro — fondo de la sección del contador (color de "colección") */
+  --color-launch:       oklch(0.930 0.035 12);
   /* Ciruela/malva oscuro — fondo del footer (en vez de negro puro) */
   --color-footer:       oklch(0.295 0.045 345);
 
@@ -110,6 +112,7 @@
   --gold-warm:  var(--color-gold-warm);
   --gold-soft:  var(--color-gold-soft);
   --champagne:  var(--color-champagne);
+  --launch:     var(--color-launch);
   --footer:     var(--color-footer);
   --ink:        var(--color-ink);
   --ink-soft:   var(--color-ink-soft);

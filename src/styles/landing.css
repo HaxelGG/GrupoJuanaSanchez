@@ -1835,7 +1835,7 @@
 /* ── LAUNCH COUNTDOWN ───────────────────────────────────────────────── */
 .launch {
   padding: clamp(100px, 14vw, 180px) var(--pad-x);
-  background: var(--champagne);
+  background: var(--launch);
   color: var(--ink);
   position: relative;
   overflow: hidden;
