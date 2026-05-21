@@ -94,27 +94,13 @@ export function Timeline() {
     const onScroll = () => sync();
     t.addEventListener("scroll", onScroll, { passive: true });
 
-    // Rueda vertical → scroll horizontal. Solo se "secuestra" el evento si
-    // queda recorrido en esa dirección; en los extremos se deja pasar para
-    // que Lenis siga moviendo la página.
-    const onWheel = (e: WheelEvent) => {
-      const delta = e.deltaY;
-      if (delta === 0) return;
-      const max = t.scrollWidth - t.clientWidth;
-      const canRight = t.scrollLeft < max - 1;
-      const canLeft = t.scrollLeft > 1;
-      if ((delta > 0 && canRight) || (delta < 0 && canLeft)) {
-        e.preventDefault();
-        e.stopPropagation();
-        t.scrollLeft += delta;
-      }
-    };
-    t.addEventListener("wheel", onWheel, { passive: false });
+    // NO secuestramos la rueda del ratón: el scroll vertical de la página debe
+    // fluir siempre. La línea de tiempo se recorre con las flechas (y con
+    // swipe táctil / gesto horizontal del trackpad / Shift+rueda).
 
     window.addEventListener("resize", sync);
     return () => {
       t.removeEventListener("scroll", onScroll);
-      t.removeEventListener("wheel", onWheel);
       window.removeEventListener("resize", sync);
     };
   }, [sync]);
