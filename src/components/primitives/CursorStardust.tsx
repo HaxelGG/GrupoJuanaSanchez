@@ -25,11 +25,12 @@ type Particle = {
 const MAX = 70; // techo de partículas vivas
 const SPAWN_DIST = 5; // px mínimos de movimiento entre spawns
 
-// Paleta cálida (dorados + crema) — visible sobre crema y sobre el oscuro de Printellar.
+// Paleta de dorados de medio a oscuro — legible sobre el crema claro de la
+// página Y sobre el oscuro de Printellar. (Sin crema: se perdía en el fondo.)
 const COLORS = [
   [201, 163, 90], // gold
-  [216, 187, 138], // gold-soft
-  [244, 239, 230], // cream
+  [176, 134, 66], // gold-warm
+  [150, 110, 48], // deep gold
 ];
 
 /** Sprite radial suave (punto de polvo) en un canvas reutilizable. */
@@ -83,10 +84,10 @@ export function CursorStardust() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    if (
-      window.matchMedia("(hover: none)").matches ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
+    // Solo respetamos "reducir movimiento". NO bloqueamos por (hover:none):
+    // muchos portátiles con pantalla táctil lo reportan aunque haya ratón.
+    // En su lugar, ignoramos los punteros táctiles reales (pointerType).
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
 
@@ -97,8 +98,10 @@ export function CursorStardust() {
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const resize = () => {
-      canvas.width = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
+      const w = window.innerWidth || document.documentElement.clientWidth;
+      const h = window.innerHeight || document.documentElement.clientHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
     resize();
@@ -123,7 +126,7 @@ export function CursorStardust() {
         vy: -0.15 - Math.random() * 0.35, // leve flotación hacia arriba
         life: max,
         max,
-        size: isStar ? 7 + Math.random() * 5 : 2 + Math.random() * 3,
+        size: isStar ? 8 + Math.random() * 5 : 3 + Math.random() * 3.5,
         sprite: (isStar ? stars : dots)[ci],
       });
       if (particles.length > MAX) particles.shift();
@@ -145,8 +148,8 @@ export function CursorStardust() {
         p.y += p.vy * dt * 0.06;
         p.vx *= 0.96; // fricción
         const t = p.life / p.max; // 1 → 0
-        const alpha = t * t; // se apaga suave
-        const r = p.size * (0.5 + t * 0.5);
+        const alpha = Math.sqrt(t); // se mantiene visible y se apaga al final
+        const r = p.size * (0.55 + t * 0.45);
         ctx.globalAlpha = alpha;
         ctx.drawImage(p.sprite, p.x - r, p.y - r, r * 2, r * 2);
       }
@@ -160,6 +163,10 @@ export function CursorStardust() {
     };
 
     const onMove = (e: PointerEvent) => {
+      if (e.pointerType === "touch") return; // ignora gestos táctiles
+      // Red de seguridad: si el canvas quedó sin tamaño (p.ej. se montó antes
+      // de tener viewport), lo redimensionamos al primer movimiento real.
+      if (canvas.width === 0 || canvas.height === 0) resize();
       const dx = e.clientX - lastX;
       const dy = e.clientY - lastY;
       const dist = Math.hypot(dx, dy);
@@ -167,7 +174,8 @@ export function CursorStardust() {
       lastX = e.clientX;
       lastY = e.clientY;
       spawn(e.clientX, e.clientY, dist);
-      if (dist > 28) spawn(e.clientX, e.clientY, dist); // 2.ª en movimientos rápidos
+      spawn(e.clientX, e.clientY, dist); // 2 partículas por paso
+      if (dist > 28) spawn(e.clientX, e.clientY, dist); // extra en movimientos rápidos
       if (!running) {
         running = true;
         last = performance.now();

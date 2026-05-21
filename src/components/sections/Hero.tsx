@@ -16,11 +16,6 @@ export function Hero() {
       <div className="hero-content">
         <div className="hero-top">
           <div className="meta">Caravaca de la Cruz · Murcia · España</div>
-          <div className="meta meta-right">
-            Edición Privada · MMXXVI
-            <br />
-            Cap. 01 — Hero
-          </div>
         </div>
 
         <h1 className="hero-title">
