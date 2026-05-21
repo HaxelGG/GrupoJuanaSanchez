@@ -1,7 +1,7 @@
 // Sección · Lanzamiento + cuenta atrás. ⚠️ CRÍTICO (brief §8).
 // Countdown en vivo + captura de email operativos (Fase 2).
 import Image from "next/image";
-import { CONTACT } from "@/lib/site";
+import { CONTACT, SHOPS } from "@/lib/site";
 import { CountdownDigits } from "@/components/primitives/CountdownDigits";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
 import { MagneticLink } from "@/components/primitives/MagneticLink";
@@ -68,7 +68,14 @@ export function LaunchCountdown() {
             <div className="launch-meta-row">
               <span className="lbl">Dónde</span>
               <span className="val">
-                <span className="big">juanasanchez.es</span>
+                <a
+                  className="big"
+                  href={SHOPS.juana}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  juanasanchez.es
+                </a>
                 Nueva tienda online
               </span>
             </div>
