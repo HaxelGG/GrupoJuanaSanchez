@@ -1,7 +1,6 @@
 import {
   Italiana,
   Cormorant_Garamond,
-  Fraunces,
   Jost,
   JetBrains_Mono,
 } from "next/font/google";
@@ -18,13 +17,6 @@ export const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
-  display: "swap",
-});
-
-export const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT"],
   display: "swap",
 });
 

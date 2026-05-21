@@ -50,7 +50,6 @@
   /* Tipografías (asignadas por next/font en lib/fonts.ts) */
   --font-display:  var(--font-italiana);
   --font-serif:    var(--font-cormorant);
-  --font-serif-2:  var(--font-fraunces);
   --font-sans:     var(--font-jost);
   --font-mono:     var(--font-jetbrains);
 
@@ -120,7 +119,6 @@
   --line-soft:  oklch(0.225 0.012 70 / 0.06);
   --display:    var(--font-display);
   --serif:      var(--font-serif);
-  --serif-2:    var(--font-serif-2);
   --sans:       var(--font-sans);
   --mono:       var(--font-mono);
   --pad-x:      var(--spacing-pad-x);

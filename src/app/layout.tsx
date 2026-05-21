@@ -1,13 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "@/styles/landing.css";
-import {
-  italiana,
-  cormorant,
-  fraunces,
-  jost,
-  jetbrains,
-} from "@/lib/fonts";
+import { italiana, cormorant, jost, jetbrains } from "@/lib/fonts";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
@@ -44,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${italiana.variable} ${cormorant.variable} ${fraunces.variable} ${jost.variable} ${jetbrains.variable}`}
+      className={`${italiana.variable} ${cormorant.variable} ${jost.variable} ${jetbrains.variable}`}
     >
       <body>
         {/* Sin JS los reveals quedarían invisibles — fallback. */}
