@@ -65,7 +65,7 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 110;
-  background: var(--champagne);
+  background: var(--launch);
   color: var(--ink);
   border-bottom: 1px solid rgba(29, 26, 22, 0.08);
   font-family: var(--mono);
