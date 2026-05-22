@@ -11,7 +11,7 @@ export function PuntosDeVenta() {
           Puntos de venta
         </div>
         <h2 className="reveal delay-1">
-          Dónde encontrarnos,
+          Dónde encontrarlas,
           <br />
           <em>en persona.</em>
         </h2>
