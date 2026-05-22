@@ -11,9 +11,9 @@ export function PuntosDeVenta() {
           Puntos de venta
         </div>
         <h2 className="reveal delay-1">
-          Dónde encontrarlas,
+          Dónde encontrar
           <br />
-          <em>en persona.</em>
+          <em>nuestras piezas.</em>
         </h2>
         <p className="serif-prose reveal delay-2">
           Nuestras piezas se fabrican para lucirse de cerca. Estas son las
