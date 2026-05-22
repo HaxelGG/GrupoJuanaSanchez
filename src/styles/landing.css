@@ -423,7 +423,7 @@
 
 /* ── DECLARATION ────────────────────────────────────────────────────── */
 .declaration {
-  padding: var(--pad-y) var(--pad-x);
+  padding: var(--pad-y) var(--pad-x) clamp(32px, 4vw, 56px);
   background: var(--cream);
   text-align: center;
   position: relative;
@@ -1609,7 +1609,7 @@
 
 /* ── LEGADO + TIENDAS (sección fusionada) ───────────────────────────── */
 .legado-tiendas {
-  padding: clamp(64px, 9vw, 120px) var(--pad-x) clamp(100px, 14vw, 180px);
+  padding: clamp(32px, 4vw, 56px) var(--pad-x) clamp(100px, 14vw, 180px);
   background: var(--cream);
   position: relative;
 }
@@ -1671,13 +1671,15 @@
 }
 .lt-shops-head {
   max-width: 1400px;
-  margin: 0 auto 36px;
+  margin: 0 auto clamp(32px, 4vw, 52px);
   display: flex;
   flex-direction: column;
   gap: 6px;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(18px, 1.8vw, 24px);
+  font-size: clamp(24px, 2.8vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--ink);
   text-align: center;
 }
