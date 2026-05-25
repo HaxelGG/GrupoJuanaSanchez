@@ -1,8 +1,6 @@
-// Sección · Lanzamiento + cuenta atrás. ⚠️ CRÍTICO (brief §8).
-// Countdown en vivo + captura de email operativos (Fase 2).
+// Sección · Lanzamiento — anticipación "muy pronto" + captura de email.
 import Image from "next/image";
 import { CONTACT, SHOPS, LAUNCH_LABEL } from "@/lib/site";
-import { CountdownDigits } from "@/components/primitives/CountdownDigits";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
 import { MagneticLink } from "@/components/primitives/MagneticLink";
 import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
@@ -25,7 +23,7 @@ export function LaunchCountdown() {
         <div className="launch-left">
           <div className="launch-tag reveal">
             <span className="pulse-dot" />
-            Próximo lanzamiento · Cuenta atrás
+            Próximo lanzamiento
           </div>
 
           <h2 className="launch-title reveal delay-1">
@@ -42,7 +40,13 @@ export function LaunchCountdown() {
             cosiendo. Sé de las primeras en verla.
           </p>
 
-          <CountdownDigits />
+          <div className="launch-soon reveal delay-2">
+            <span className="launch-soon-eyebrow">
+              <span className="pulse-dot" />
+              Muy pronto
+            </span>
+            <span className="launch-soon-big">Nueva tienda online</span>
+          </div>
 
           <div className="launch-cta reveal delay-3">
             <MagneticLink
@@ -97,7 +101,7 @@ export function LaunchCountdown() {
               <br />
               Las piezas, en silencio.
             </div>
-            <div className="right">03 / 06</div>
+            <div className="right">26 / 05</div>
           </div>
         </div>
       </div>
