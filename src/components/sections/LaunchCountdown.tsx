@@ -101,7 +101,7 @@ export function LaunchCountdown() {
               <br />
               Las piezas, en silencio.
             </div>
-            <div className="right">26 / 05</div>
+            <div className="right">30 / 05</div>
           </div>
         </div>
       </div>

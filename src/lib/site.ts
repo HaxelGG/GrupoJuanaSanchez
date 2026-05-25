@@ -1,16 +1,15 @@
 // Constantes del sitio — Grupo Juana Sánchez.
 
-/** Lanzamiento tienda Juana Sánchez: 26 may 2026 · 18:00 CEST (16:00 UTC).
- *  Cuenta atrás corta (≈5 días). */
-export const LAUNCH_TARGET_UTC = Date.UTC(2026, 4, 26, 16, 0, 0);
+/** Lanzamiento tienda Juana Sánchez: 30 may 2026 · 18:00 CEST (16:00 UTC). */
+export const LAUNCH_TARGET_UTC = Date.UTC(2026, 4, 30, 16, 0, 0);
 
 /** Etiqueta legible del lanzamiento — FUENTE ÚNICA para el contador, el banner
  *  y el formulario de aviso, para que nunca se desincronicen. Si cambias la
  *  fecha, actualiza LAUNCH_TARGET_UTC y estas etiquetas a la vez. */
 export const LAUNCH_LABEL = {
-  date: "26 de mayo",
+  date: "30 de mayo",
   time: "18:00 CEST",
-  short: "26 mayo · 18:00",
+  short: "30 mayo · 18:00",
 } as const;
 
 export const CONTACT = {
