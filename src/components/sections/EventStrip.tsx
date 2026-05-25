@@ -28,7 +28,7 @@ export function EventStrip() {
         <>
           <strong>Nueva colección · {LAUNCH_LABEL.short}</strong>
           <span className="sep">·</span>
-          <span className="hide-mob">Cuenta atrás en directo</span>
+          <span className="hide-mob">Muy pronto</span>
           <span className="hide-mob sep">·</span>
           <span className="hide-mob">Nueva tienda online</span>
         </>
