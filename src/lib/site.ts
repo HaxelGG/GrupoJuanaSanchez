@@ -28,7 +28,7 @@ export const CONTACT = {
 
 export const SHOPS = {
   juana: "https://grupojuanasanchez.com/",
-  lolikas: "https://www.lolikas.com/",
+  lolikas: "https://grupojuanasanchez.com/pages/lolikas",
 } as const;
 
 export type Boutique = {

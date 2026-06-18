@@ -55,7 +55,7 @@ export function JuanaStory() {
             <span className="lbl">Venta directa</span>
             <span className="val">
               <a href={SHOPS.juana} target="_blank" rel="noopener">
-                juanasanchez.es
+                grupojuanasanchez.com
               </a>
             </span>
           </div>

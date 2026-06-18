@@ -32,8 +32,7 @@ const jsonLd = {
         addressCountry: "ES",
       },
       sameAs: [
-        "https://www.juanasanchez.es",
-        "https://www.lolikas.com",
+        "https://grupojuanasanchez.com",
         "https://instagram.com/grupojuanasanchez",
       ],
     },

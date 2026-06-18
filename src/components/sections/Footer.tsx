@@ -44,7 +44,7 @@ export function Footer() {
               grupojuanasanchez.com
             </a>
             <a href={SHOPS.lolikas} target="_blank" rel="noopener">
-              lolikas.com
+              lolikas · grupojuanasanchez.com
             </a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener">
               printelar · cotizar
