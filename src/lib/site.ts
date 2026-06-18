@@ -27,7 +27,7 @@ export const CONTACT = {
 } as const;
 
 export const SHOPS = {
-  juana: "https://www.juanasanchez.es/",
+  juana: "https://grupojuanasanchez.com/",
   lolikas: "https://www.lolikas.com/",
 } as const;
 

@@ -41,7 +41,7 @@ export function Footer() {
           <div className="footer-col">
             <h4>Tiendas online</h4>
             <a href={SHOPS.juana} target="_blank" rel="noopener">
-              juanasanchez.es
+              grupojuanasanchez.com
             </a>
             <a href={SHOPS.lolikas} target="_blank" rel="noopener">
               lolikas.com

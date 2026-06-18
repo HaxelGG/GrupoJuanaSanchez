@@ -1,6 +1,6 @@
 "use client";
 
-// Captura de email pre-lanzamiento (brief §10). Dialog de shadcn +
+// Captura de email para newsletter (tienda ya abierta). Dialog de shadcn +
 // react-hook-form + zod. Envía a /api/subscribe (Resend) y confirma con toast.
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -16,7 +16,6 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { LAUNCH_LABEL } from "@/lib/site";
 
 const schema = z.object({
   email: z.email("Introduce un email válido."),
@@ -48,7 +47,7 @@ export function SubscribeDialog() {
         toast.error(data.error ?? "No se pudo registrar. Inténtalo de nuevo.");
         return;
       }
-      toast.success(`Te avisaremos el ${LAUNCH_LABEL.date} a las ${LAUNCH_LABEL.time}.`);
+      toast.success("Suscripción confirmada. Gracias.");
       reset();
       setOpen(false);
     } catch {
@@ -58,15 +57,14 @@ export function SubscribeDialog() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger className="btn-ghost">Avísame por email</DialogTrigger>
+      <DialogTrigger className="btn-ghost">Newsletter</DialogTrigger>
       <DialogContent className="border-border bg-paper sm:max-w-100">
         <DialogHeader>
           <DialogTitle className="font-display text-3xl leading-none font-normal tracking-tight text-ink">
-            Sé de las primeras en verla
+            Sé la primera en saberlo
           </DialogTitle>
           <DialogDescription className="font-serif text-base text-ink-soft italic">
-            Te escribimos una sola vez: el {LAUNCH_LABEL.date}, cuando se abra
-            la tienda. Nada más.
+            Novedades de la colección y ofertas exclusivas. Sin spam, prometido.
           </DialogDescription>
         </DialogHeader>
 
@@ -95,11 +93,11 @@ export function SubscribeDialog() {
             disabled={isSubmitting}
             className="font-mono text-[11px] tracking-[0.25em] uppercase bg-mauve-deep text-cream px-6 py-3.5 transition-colors hover:bg-mauve disabled:opacity-60"
           >
-            {isSubmitting ? "Enviando…" : "Avísame"}
+            {isSubmitting ? "Enviando…" : "Suscribirme"}
           </button>
 
           <p className="font-mono text-[11px] tracking-wide text-ink-faint">
-            Sin spam. Solo el aviso del lanzamiento.
+            Sin spam. Solo novedades y ofertas.
           </p>
         </form>
       </DialogContent>

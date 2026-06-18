@@ -1,6 +1,6 @@
-// Sección · Lanzamiento — anticipación "muy pronto" + captura de email.
+// Sección · Lanzamiento — la tienda ya abrió: invita a visitarla.
 import Image from "next/image";
-import { CONTACT, SHOPS, LAUNCH_LABEL } from "@/lib/site";
+import { SHOPS } from "@/lib/site";
 import { SubscribeDialog } from "@/components/sections/SubscribeDialog";
 import { MagneticLink } from "@/components/primitives/MagneticLink";
 import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
@@ -23,7 +23,7 @@ export function LaunchCountdown() {
         <div className="launch-left">
           <div className="launch-tag reveal">
             <span className="pulse-dot" />
-            Próximo lanzamiento
+            Nueva colección · Comunión 2026
           </div>
 
           <h2 className="launch-title reveal delay-1">
@@ -31,42 +31,42 @@ export function LaunchCountdown() {
             <br />
             <em>colección.</em>
             <br />
-            Llega muy pronto.
+            Ya está aquí.
           </h2>
 
           <p className="launch-sub reveal delay-2">
-            El {LAUNCH_LABEL.date}, 18:00 hora peninsular, se abre la nueva
-            tienda online de Juana Sánchez con la colección que llevamos meses
-            cosiendo. Sé de las primeras en verla.
+            La nueva tienda online de Juana Sánchez ya está abierta. Descubre la
+            colección hecha a mano en España: esparteñas, coronas, tocados y
+            conjuntos de ceremonia.
           </p>
 
           <div className="launch-soon reveal delay-2">
             <span className="launch-soon-eyebrow">
               <span className="pulse-dot" />
-              Muy pronto
+              Ya disponible
             </span>
-            <span className="launch-soon-big">Nueva tienda online</span>
+            <span className="launch-soon-big">Tienda online</span>
           </div>
 
           <div className="launch-cta reveal delay-3">
             <MagneticLink
               className="btn-primary"
-              href={CONTACT.instagram}
+              href={SHOPS.juana}
               target="_blank"
               rel="noopener"
               strength={0.4}
             >
-              Sé de las primeras en verla
+              Visitar la tienda
             </MagneticLink>
             <SubscribeDialog />
           </div>
 
           <div className="launch-meta reveal delay-3">
             <div className="launch-meta-row">
-              <span className="lbl">Fecha</span>
+              <span className="lbl">Apertura</span>
               <span className="val">
-                <span className="big">{LAUNCH_LABEL.short}</span>
-                Hora peninsular · CEST
+                <span className="big">Ya disponible</span>
+                Hecho a mano · Envíos a toda Europa
               </span>
             </div>
             <div className="launch-meta-row">
@@ -78,9 +78,9 @@ export function LaunchCountdown() {
                   target="_blank"
                   rel="noopener"
                 >
-                  juanasanchez.es
+                  grupojuanasanchez.com
                 </a>
-                Nueva tienda online
+                Tienda online
               </span>
             </div>
           </div>
@@ -101,7 +101,7 @@ export function LaunchCountdown() {
               <br />
               Las piezas, en silencio.
             </div>
-            <div className="right">30 / 05</div>
+            <div className="right">MMXXVI</div>
           </div>
         </div>
       </div>
