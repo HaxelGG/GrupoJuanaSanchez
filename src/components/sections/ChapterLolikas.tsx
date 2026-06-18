@@ -11,6 +11,28 @@ const PRODUCTS: [string, string][] = [
   ["Collares", "Edición"],
 ];
 
+type Piece = { src: string; alt: string; name: string; tag: string };
+const PIECES: Piece[] = [
+  {
+    src: "/assets/images/lolikas/capazo-lks-verde.jpg",
+    alt: "Capazo LKS de fieltro verde con asas trenzadas",
+    name: "Capazo LKS · Verde",
+    tag: "Fieltro · Asas trenzadas",
+  },
+  {
+    src: "/assets/images/lolikas/clutch-rafia-oro.jpg",
+    alt: "Clutch Lolikas en rafia dorada con monograma",
+    name: "Clutch · Rafia dorada",
+    tag: "Edición ceremonia",
+  },
+  {
+    src: "/assets/images/lolikas/clutch-negro-perla.jpg",
+    alt: "Clutch Lolikas negro con perlas y flor de tul",
+    name: "Clutch · Perla & flor",
+    tag: "Noche",
+  },
+];
+
 export function ChapterLolikas() {
   return (
     <section className="chapter ch-lolikas" id="lolikas">
@@ -87,6 +109,37 @@ export function ChapterLolikas() {
             sizes="(max-width: 920px) 100vw, 700px"
           />
           <div className="det-meta">Det. 04 — Guante de encaje</div>
+        </div>
+      </div>
+
+      <div className="pieces-strip">
+        <div className="pieces-head reveal">
+          <span className="lbl">Piezas</span>
+          <span className="title">En la tienda · Selección Lolikas</span>
+        </div>
+        <div className="pieces-grid">
+          {PIECES.map((p, i) => (
+            <a
+              key={p.src}
+              className={`piece-card reveal delay-${i + 1}`}
+              href="https://grupojuanasanchez.com/pages/lolikas"
+              target="_blank"
+              rel="noopener"
+            >
+              <div className="piece-img">
+                <Image
+                  src={p.src}
+                  alt={p.alt}
+                  fill
+                  sizes="(max-width: 920px) 100vw, 420px"
+                />
+              </div>
+              <div className="piece-meta">
+                <span className="piece-name">{p.name}</span>
+                <span className="piece-tag">{p.tag}</span>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
 
