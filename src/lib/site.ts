@@ -21,9 +21,12 @@ export const CONTACT = {
   whatsappDisplay: "+34 613 775 981",
   phone: "+34 968 70 57 22",
   phoneTel: "+34968705722",
-  instagram: "https://instagram.com/grupojuanasanchez",
-  instagramHandle: "@grupojuanasanchez",
-  email: "info@juanasanchez.es",
+  instagram: "https://instagram.com/juanasanchez_oficial",
+  instagramHandle: "@juanasanchez_oficial",
+  /** Buzón público (clientas finales). */
+  email: "hola@grupojuanasanchez.com",
+  /** Buzón B2B / profesionales (boutiques, prensa, distribuidores). */
+  emailPro: "info@grupojuanasanchez.com",
 } as const;
 
 export const SHOPS = {

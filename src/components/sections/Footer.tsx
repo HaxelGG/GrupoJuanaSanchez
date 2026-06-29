@@ -58,6 +58,7 @@ export function Footer() {
               {CONTACT.whatsappDisplay} · WhatsApp
             </a>
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+            <a href={`mailto:${CONTACT.emailPro}`}>{CONTACT.emailPro} · Pro</a>
             <a href={CONTACT.instagram} target="_blank" rel="noopener">
               {CONTACT.instagramHandle}
             </a>
