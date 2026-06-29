@@ -61,13 +61,10 @@ export function PullQuote() {
         <p className="lt-line reveal delay-2">
           Cincuenta años <em>fabricando</em> lo único que no caduca.
         </p>
-        <div className="lt-attr reveal delay-3">
-          Grupo Juana Sánchez · 1975 — 2026
-        </div>
       </div>
 
       <div className="lt-shops-head reveal delay-1">
-        <span>Tres puertas. Tres mundos. Una misma maestría.</span>
+        <span>Tres puertas. Una sola maestría.</span>
       </div>
 
       <div className="shops-grid">
@@ -96,6 +93,9 @@ export function PullQuote() {
       <p className="lt-shops-foot reveal delay-1">
         Envíos a toda Europa · Pago seguro con tarjeta, PayPal o transferencia.
       </p>
+      <div className="lt-attr-bottom reveal delay-2">
+        Grupo Juana Sánchez · 1975 — 2026
+      </div>
     </section>
   );
 }

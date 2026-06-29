@@ -3,12 +3,9 @@ import Image from "next/image";
 import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
 
 const PRODUCTS: [string, string][] = [
-  ["Bolsos", "Pieza única"],
-  ["Tocados", "Edición"],
-  ["Cinturones", "Cuero"],
-  ["Accesorios para bolsos", "Detalle"],
-  ["Monederos", "Hecho a mano"],
-  ["Collares", "Edición"],
+  ["Fieltro LKS", "4 modelos · monograma troquelado"],
+  ["Capazo de cuerda", "5 modelos · rafia bordada"],
+  ["Media luna · Clutch", "5 modelos · flor en raso/fieltro"],
 ];
 
 type Piece = { src: string; alt: string; name: string; tag: string };
@@ -94,21 +91,21 @@ export function ChapterLolikas() {
       <div className="detail-strip">
         <div className="detail-img reveal">
           <Image
-            src="/assets/images/lolikas-corona.jpg"
-            alt="Corona artesanal Lolikas con tul"
+            src="/assets/images/lolikas/capazo-lks-verde.jpg"
+            alt="Capazo LKS de fieltro verde con asas trenzadas — Lolikas"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 03 — Corona artesanal</div>
+          <div className="det-meta">Det. 03 — Fieltro LKS</div>
         </div>
         <div className="detail-img reveal delay-1">
           <Image
-            src="/assets/images/lolikas-guante.jpg"
-            alt="Guante de encaje hecho a mano Lolikas"
+            src="/assets/images/lolikas/lolikas-detalle-agua.jpg"
+            alt="Esparteñas agua menta con flor blanca — Lolikas"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 04 — Guante de encaje</div>
+          <div className="det-meta">Det. 04 — Agua menta</div>
         </div>
       </div>
 
@@ -145,13 +142,13 @@ export function ChapterLolikas() {
 
       <div className="products-wrap">
         <div className="ph reveal">
-          Familia
+          Catálogo
           <span className="small">
-            Seis líneas
+            Tres familias
             <br />
-            para llevar la marca
+            catorce piezas vivas,
             <br />
-            fuera de la ceremonia.
+            misma escuela libre.
           </span>
         </div>
         <div className="product-grid reveal delay-1">

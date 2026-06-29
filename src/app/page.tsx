@@ -12,6 +12,7 @@ import { ChapterPrintellar } from "@/components/sections/ChapterPrintellar";
 import { Manifesto } from "@/components/sections/Manifesto";
 import { PuntosDeVenta } from "@/components/sections/PuntosDeVenta";
 import { Footer } from "@/components/sections/Footer";
+import { WhatsAppFloat } from "@/components/primitives/WhatsAppFloat";
 
 // Schema.org — brief §9.2.
 const jsonLd = {
@@ -100,6 +101,7 @@ export default function Home() {
         <PuntosDeVenta />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }

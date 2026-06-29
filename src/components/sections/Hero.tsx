@@ -1,16 +1,13 @@
-// Sección · Hero full-bleed. Imagen optimizada con next/image (priority → LCP).
-import Image from "next/image";
+// Sección · Hero full-bleed. Video de Caravaca (Multimedia IA master 16x9).
+import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
 
 export function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg">
-        <Image
-          src="/assets/images/girl-hero.jpg"
-          alt="Niña con corona artesanal — Grupo Juana Sánchez"
-          fill
-          priority
-          sizes="100vw"
+        <AutoplayVideo
+          src="/assets/video/js-caravaca-hero.mp4"
+          poster="/assets/video/js-caravaca-hero-poster.jpg"
         />
       </div>
       <div className="hero-content">

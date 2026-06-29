@@ -51,8 +51,8 @@ export function TrioIntro() {
           <em>un mismo latido.</em>
         </h2>
         <p className="serif-prose reveal delay-2">
-          Una sola escuela, tres lenguajes. La ceremonia, la moda diaria y el
-          taller técnico que los une.
+          Una escuela, tres acentos. La ceremonia, la moda diaria y el taller
+          técnico que los une.
         </p>
       </div>
 

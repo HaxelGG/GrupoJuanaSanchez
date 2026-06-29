@@ -360,12 +360,12 @@
 .hero-sub {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(17px, 1.5vw, 27px);
+  font-size: clamp(22px, 2.4vw, 36px);
   font-weight: 400;
-  color: rgba(244, 239, 230, 0.95);
-  text-shadow: 0 1px 22px rgba(42, 38, 32, 0.45);
-  max-width: 34ch;
-  line-height: 1.55;
+  color: rgba(244, 239, 230, 0.96);
+  text-shadow: 0 1px 22px rgba(42, 38, 32, 0.5);
+  max-width: 38ch;
+  line-height: 1.3;
   text-align: right;
   margin-left: auto;
   opacity: 0;
@@ -691,11 +691,11 @@
 }
 .t-year {
   font-family: var(--display);
-  font-size: clamp(38px, 4.5vw, 60px);
-  line-height: 1;
-  color: var(--ink);
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
+  font-size: clamp(64px, 7vw, 132px);
+  line-height: 0.95;
+  color: var(--mauve-deep);
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
 }
 .t-step.is-now .t-year { color: var(--gold-warm); }
 .t-event {
@@ -1093,17 +1093,17 @@
   z-index: 2;
 }
 .products-wrap {
-  padding: clamp(40px, 6vw, 80px) var(--pad-x) clamp(80px, 10vw, 140px);
+  padding: clamp(60px, 8vw, 110px) var(--pad-x) clamp(100px, 12vw, 170px);
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: clamp(40px, 6vw, 100px);
+  grid-template-columns: 320px 1fr;
+  gap: clamp(48px, 7vw, 120px);
   align-items: start;
 }
 .products-wrap .ph {
   font-family: var(--mono);
-  font-size: clamp(13px, 0.9vw, 16px);
+  font-size: clamp(15px, 1.1vw, 18px);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--ink-faint);
@@ -1112,11 +1112,11 @@
   display: block;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 22px;
+  font-size: clamp(26px, 2vw, 32px);
   letter-spacing: 0;
   text-transform: none;
   color: var(--ink);
-  margin-top: 12px;
+  margin-top: 16px;
   line-height: 1.3;
 }
 .product-grid {
@@ -1130,11 +1130,12 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 18px 0;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line-soft);
   font-family: var(--serif);
+  font-style: italic;
   font-weight: 400;
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: clamp(20px, 1.6vw, 28px);
   color: var(--ink);
   transition: padding-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
@@ -1150,7 +1151,8 @@
 .product-row:nth-child(odd):hover { padding-left: 12px; }
 .product-row .tag {
   font-family: var(--mono);
-  font-size: clamp(13px, 0.9vw, 16px);
+  font-style: normal;
+  font-size: clamp(11px, 0.8vw, 13px);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink-faint);
@@ -1319,6 +1321,15 @@
 .ch-printellar .product-row { color: var(--ink); border-color: rgba(29, 26, 22, 0.08); }
 .ch-printellar .product-row:nth-child(odd) { border-right-color: rgba(29, 26, 22, 0.08); }
 .ch-printellar .product-row .tag { color: var(--printellar-accent); opacity: 0.9; }
+
+/* ── Tipografía por marca: cada capítulo usa max 3 fuentes coherentes. ── */
+.ch-juana .body-prose { font-family: var(--serif); font-style: italic; font-weight: 300; }
+.ch-juana .tagline { font-family: var(--display); }
+.ch-lolikas .body-prose { font-family: var(--sans); font-style: normal; font-weight: 300; }
+.ch-lolikas .tagline { font-family: var(--display); }
+.ch-printellar .chapter-name em { font-family: var(--sans); font-weight: 500; letter-spacing: -0.02em; font-style: normal; }
+.ch-printellar .tagline { font-family: var(--sans); font-weight: 400; font-style: normal; }
+.ch-printellar .body-prose { font-family: var(--sans); font-weight: 300; }
 
 /* CTA de cotización — botón dorado sobre el azul pastel (azul + oro elegante). */
 .printellar-cta {
@@ -1727,8 +1738,8 @@
   font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(30px, 4.5vw, 64px);
-  line-height: 1.05;
+  font-size: clamp(40px, 5.5vw, 88px);
+  line-height: 1.02;
   color: var(--mauve-deep);
   margin-top: 6px;
 }
@@ -1751,8 +1762,8 @@
   margin-top: clamp(24px, 3vw, 40px);
 }
 .lt-shops-head {
-  max-width: 1400px;
-  margin: 0 auto clamp(32px, 4vw, 52px);
+  max-width: 1180px;
+  margin: 0 auto clamp(32px, 4vw, 52px) calc(var(--pad-x) + clamp(0px, 6vw, 80px));
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -1762,7 +1773,7 @@
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--ink);
-  text-align: center;
+  text-align: left;
 }
 .lt-shops-head .lt-shops-sub {
   font-family: var(--mono);
@@ -1782,6 +1793,18 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-faint);
+}
+/* Atribución del legado: ahora va debajo del grid de tiendas. */
+.lt-attr-bottom {
+  max-width: 1400px;
+  margin: clamp(10px, 1vw, 16px) auto 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: clamp(11px, 0.78vw, 13px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  opacity: 0.85;
 }
 
 /* ── SHOPS ──────────────────────────────────────────────────────────── */
@@ -1821,8 +1844,8 @@
   padding-bottom: 10px;
 }
 .shops-grid {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1180px;
+  margin: 0 auto 0 calc(var(--pad-x) + clamp(0px, 6vw, 80px));
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(16px, 1.5vw, 24px);
@@ -1911,7 +1934,8 @@
 .shop-arrow { display: inline-block; transition: transform 0.5s ease; font-size: clamp(14px, 1vw, 18px); }
 @media (max-width: 920px) {
   .shops-head { grid-template-columns: 1fr; gap: 24px; }
-  .shops-grid { grid-template-columns: 1fr; }
+  .shops-grid { grid-template-columns: 1fr; margin: 0 auto; max-width: none; }
+  .lt-shops-head { margin: 0 auto clamp(20px, 4vw, 32px); max-width: none; text-align: center; }
   .shop-btn { min-height: 200px; gap: 40px; }
 }
 
@@ -2557,4 +2581,60 @@ body.is-dark-section {
   display: flex;
   align-items: center;
   gap: clamp(14px, 2vw, 28px);
+}
+
+/* ── Video de Printelar dentro del taller-composition ──────────────── */
+.taller-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: var(--printellar-deep);
+  border: 1px solid rgba(29, 26, 22, 0.08);
+}
+.taller-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.78;
+  mix-blend-mode: multiply;
+}
+
+/* ── Burbuja flotante de WhatsApp ──────────────────────────────────── */
+.wa-float {
+  position: fixed;
+  right: clamp(18px, 2.5vw, 28px);
+  bottom: clamp(18px, 2.5vw, 28px);
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35),
+              0 4px 10px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  z-index: 50;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: wa-float-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.8s forwards;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease;
+}
+.wa-float:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.45),
+              0 6px 14px rgba(0, 0, 0, 0.18);
+}
+.wa-float svg { width: 32px; height: 32px; display: block; }
+@keyframes wa-float-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 920px) {
+  .wa-float { width: 54px; height: 54px; }
+  .wa-float svg { width: 28px; height: 28px; }
 }

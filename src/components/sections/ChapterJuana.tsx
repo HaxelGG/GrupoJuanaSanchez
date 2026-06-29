@@ -3,22 +3,13 @@ import Image from "next/image";
 import { JuanaStory } from "./JuanaStory";
 
 const PRODUCTS: [string, string][] = [
-  ["Coronas", "Comunión"],
-  ["Tocados", "Madrina"],
-  ["Diademas", "Niña · Bebé"],
-  ["Velos y tules", "Ceremonia"],
-  ["Guantes", "Ceremonia"],
-  ["Esparteñas", "Novia · Niña · Niño"],
-  ["Limosneras y cestas", "Arras"],
-  ["Collares y rosarios", "Niña"],
-  ["Bastidor y pañuelos", "Ceremonia"],
-  ["Canotier y pamelas", "Niña"],
-  ["Agujones y prendidos", "Tocado"],
-  ["Pulseras y cruces", "Comunión · Niño"],
-  ["Turbantes", "Madrina"],
-  ["Cancanes y refajos", "Estructura"],
-  ["Conjuntos", "Hermanados"],
-  ["Sombreros", "Madrina"],
+  ["Esparteñas", "Niña · Madrina · Novia"],
+  ["Coronas", "Comunión · Ceremonia"],
+  ["Tocados", "Madrina · Ceremonia"],
+  ["Diademas", "Niña · Comunión"],
+  ["Bolsos", "Capazos · Ceremonia"],
+  ["Guantes", "Comunión · Ceremonia"],
+  ["Conjuntos completos", "17 sets hermanados"],
 ];
 
 export function ChapterJuana() {
@@ -42,21 +33,21 @@ export function ChapterJuana() {
       <div className="detail-strip">
         <div className="detail-img reveal">
           <Image
-            src="/assets/images/juana-detalle-rosa.jpg"
-            alt="Esparteñas de ceremonia Juana Sánchez, detalle artesanal"
+            src="/assets/images/juana-detalle-novia.jpg"
+            alt="Esparteñas marfil de novia con flores hechas a mano — Juana Sánchez"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 01 — Esparteñas a mano</div>
+          <div className="det-meta">Det. 01 — Marfil novia</div>
         </div>
         <div className="detail-img reveal delay-1">
           <Image
-            src="/assets/images/juana-detalle-mint.jpg"
-            alt="Calzado de ceremonia Juana Sánchez, hecho a mano"
+            src="/assets/images/juana-detalle-agua.jpg"
+            alt="Esparteñas agua menta con tul y encaje — Juana Sánchez"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 02 — Calzado de ceremonia</div>
+          <div className="det-meta">Det. 02 — Agua menta</div>
         </div>
       </div>
 
@@ -64,11 +55,11 @@ export function ChapterJuana() {
         <div className="ph reveal">
           Catálogo
           <span className="small">
-            Dieciséis familias
+            Siete familias
             <br />
-            de piezas, todas con
+            de piezas, todas
             <br />
-            la misma escuela.
+            con la misma escuela.
           </span>
         </div>
         <div className="product-grid reveal delay-1">

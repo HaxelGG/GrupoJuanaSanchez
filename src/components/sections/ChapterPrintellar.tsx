@@ -2,14 +2,16 @@
 // Fondo marrón tabaco + dorado. CTA de cotización por WhatsApp.
 import { CONTACT } from "@/lib/site";
 import { MagneticLink } from "@/components/primitives/MagneticLink";
+import { AutoplayVideo } from "@/components/primitives/AutoplayVideo";
 
 const PRODUCTS: [string, string][] = [
-  ["Estampación textil directa", "DTF · DTG"],
-  ["Pegatinas y vinilos", "Adhesivo"],
-  ["Cuadros sobre lienzo", "Impresión"],
-  ["Lonas a medida", "Cualquier tamaño"],
-  ["Pósters", "Edición"],
-  ["Corte y grabado láser", "Precisión"],
+  ["Estampado textil", "Camisetas · Telas"],
+  ["Bordado", "Personalizado"],
+  ["Serigrafía", "Volumen"],
+  ["Impresión digital", "Sublimación"],
+  ["Personalización monograma", "Pieza única"],
+  ["Producción made-to-order", "A medida"],
+  ["Asesoría técnica", "Muestras"],
 ];
 
 const SURFACES = ["Tela.", "Madera.", "Lienzo.", "Metal.", "Papel."];
@@ -78,6 +80,12 @@ export function ChapterPrintellar() {
           </div>
         </div>
         <div className="taller-composition reveal delay-1">
+          <div className="taller-video">
+            <AutoplayVideo
+              src="/assets/video/printelar-coleccion.mp4"
+              poster="/assets/video/js-caravaca-hero-poster.jpg"
+            />
+          </div>
           <div className="taller-top">
             <span>PR · TALLER</span>
             <span>2026</span>
@@ -100,9 +108,9 @@ export function ChapterPrintellar() {
 
       <div className="products-wrap">
         <div className="ph reveal">
-          Capacidades
+          Servicios
           <span className="small">
-            Seis servicios.
+            Siete servicios.
             <br />
             Una sola promesa:
             <br />

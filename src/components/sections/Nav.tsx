@@ -4,7 +4,6 @@
 // (.on-dark) para mantener legibilidad. Menú hamburguesa en mobile.
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/site";
-import { WhatsAppNavButton } from "@/components/sections/WhatsAppNavButton";
 
 // Printelar (azul pastel) y el contador (champán) dejaron de ser oscuros.
 const DARK_SELECTORS: string[] = [];
@@ -70,8 +69,6 @@ export function Nav() {
               </a>
             ))}
           </div>
-
-          <WhatsAppNavButton />
 
           <button
             type="button"
