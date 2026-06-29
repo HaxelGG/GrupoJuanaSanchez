@@ -91,21 +91,21 @@ export function ChapterLolikas() {
       <div className="detail-strip">
         <div className="detail-img reveal">
           <Image
-            src="/assets/images/lolikas/capazo-lks-verde.jpg"
-            alt="Capazo LKS de fieltro verde con asas trenzadas — Lolikas"
+            src="/assets/images/lolikas/lolikas-collage-espartenas.jpg"
+            alt="Esparteñas Lolikas con flores: nueve escenas editoriales"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 03 — Fieltro LKS</div>
+          <div className="det-meta">Det. 03 — Esparteñas · 9 escenas</div>
         </div>
         <div className="detail-img reveal delay-1">
           <Image
-            src="/assets/images/lolikas/lolikas-detalle-agua.jpg"
-            alt="Esparteñas agua menta con flor blanca — Lolikas"
+            src="/assets/images/lolikas/lolikas-collage-clutch.jpg"
+            alt="Clutch LKS de perla y flor en nueve contextos — Lolikas"
             fill
             sizes="(max-width: 920px) 100vw, 700px"
           />
-          <div className="det-meta">Det. 04 — Agua menta</div>
+          <div className="det-meta">Det. 04 — Clutch perla · 9 escenas</div>
         </div>
       </div>
 

@@ -1321,6 +1321,10 @@
 .ch-printellar .product-row:nth-child(odd) { border-right-color: rgba(29, 26, 22, 0.08); }
 .ch-printellar .product-row .tag { color: var(--printellar-accent); opacity: 0.9; }
 
+/* Detail-strip de Lolikas: los collages IA son cuadrados 1:1 — encajan
+   sin recortes. (El detalle-strip global sigue siendo 3:4 portrait.) */
+.ch-lolikas .detail-img { aspect-ratio: 1/1; }
+
 /* ── Tipografía por marca: cada capítulo usa max 3 fuentes coherentes. ── */
 .ch-juana .body-prose { font-family: var(--serif); font-style: italic; font-weight: 300; }
 .ch-juana .tagline { font-family: var(--display); }
