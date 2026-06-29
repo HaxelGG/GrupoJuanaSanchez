@@ -1216,19 +1216,18 @@
 }
 .piece-img {
   position: relative;
-  aspect-ratio: 1/1;
+  aspect-ratio: 16/9;
   overflow: hidden;
-  background: var(--cream-deep);
+  background: var(--paper);
 }
 .piece-img img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), filter 1.1s ease;
-  filter: contrast(1.02) saturate(0.96);
 }
 .piece-card:hover .piece-img img {
-  transform: scale(1.05);
-  filter: contrast(1.05) saturate(1) brightness(1.02);
+  transform: scale(1.04);
+  filter: contrast(1.03) brightness(1.02);
 }
 .piece-meta {
   display: flex;
